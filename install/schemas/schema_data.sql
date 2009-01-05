@@ -833,4 +833,12 @@ INSERT INTO phpbb_extensions (group_id, extension) VALUES (9, 'mp3');
 INSERT INTO phpbb_extensions (group_id, extension) VALUES (9, 'ogg');
 INSERT INTO phpbb_extensions (group_id, extension) VALUES (9, 'ogm');
 
+# -- Required base entries for hot topics
+INSERT INTO bp_hottopics (slot_id, topic_id, forum_id, image_id, last_update) VALUES (1, 0, 0, 0, 0);
+INSERT INTO bp_hottopics (slot_id, topic_id, forum_id, image_id, last_update) VALUES (2, 0, 0, 0, 0);
+INSERT INTO bp_hottopics (slot_id, topic_id, forum_id, image_id, last_update) VALUES (3, 0, 0, 0, 0);
+INSERT INTO bp_hottopics (slot_id, topic_id, forum_id, image_id, last_update) VALUES (4, 0, 0, 0, 0);
+INSERT INTO bp_hottopics (slot_id, topic_id, forum_id, image_id, last_update) VALUES (5, 0, 0, 0, 0);
+INSERT INTO bp_hottopics (slot_id, topic_id, forum_id, image_id, last_update) VALUES (6, 0, 0, 0, 0);
+
 # POSTGRES COMMIT #

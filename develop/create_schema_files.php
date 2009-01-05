@@ -1946,6 +1946,17 @@ function get_schema_struct()
 		'PRIMARY_KEY'	=> array('user_id', 'zebra_id'),
 	);
 
+	$schema_data['bp_hottopics'] = array(
+		'COLUMNS'		=> array(
+			'slot_id'			=> array('TINT:3', 0),
+			'topic_id'			=> array('UINT', 0),
+			'forum_id'			=> array('UINT', 0),
+			'image_id'			=> array('UINT', 0),
+			'last_update'		=> array('TIMESTAMP', 0),
+		),
+		'PRIMARY_KEY'	=> array('slot_id'),
+	);
+
 	return $schema_data;
 }
 
