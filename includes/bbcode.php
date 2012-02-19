@@ -128,7 +128,7 @@ class bbcode
 	*/
 	function bbcode_cache_init()
 	{
-		global $user, $phpbb_root_path;
+		global $phpbb_root_path, $template, $user;
 
 		if (empty($this->template_filename))
 		{
@@ -137,7 +137,7 @@ class bbcode
 
 			if (!@file_exists($this->template_filename))
 			{
-				if (isset($user->theme['template_inherits_id']) && $user->theme['template_inherits_id'])
+				if (isset($template->orig_tpl_inherits_id) && $template->orig_tpl_inherits_id)
 				{
 					$this->template_filename = $phpbb_root_path . 'styles/' . $user->theme['template_inherit_path'] . '/template/bbcode.html';
 					if (!@file_exists($this->template_filename))
@@ -265,7 +265,7 @@ class bbcode
 				case 6:
 					$this->bbcode_cache[$bbcode_id] = array(
 						'preg' => array(
-							'!\[color=(#[0-9a-f]{6}|[a-z\-]+):$uid\](.*?)\[/color:$uid\]!is'	=> $this->bbcode_tpl('color', $bbcode_id),
+							'!\[color=(#[0-9a-f]{3}|#[0-9a-f]{6}|[a-z\-]+):$uid\](.*?)\[/color:$uid\]!is'	=> $this->bbcode_tpl('color', $bbcode_id),
 						)
 					);
 				break;

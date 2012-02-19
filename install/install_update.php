@@ -203,10 +203,10 @@ class install_update extends module
 			}
 
 			// What about the language file? Got it updated?
-			if (in_array('language/en/install.php', $this->update_info['files']))
+			if (in_array('language/en/install.' . $phpEx, $this->update_info['files']))
 			{
 				$lang = array();
-				include($this->new_location . 'language/en/install.php');
+				include($this->new_location . 'language/en/install.' . $phpEx);
 				// only add new keys to user's language in english
 				$new_keys = array_diff(array_keys($lang), array_keys($user->lang));
 				foreach ($new_keys as $i => $new_key)
@@ -260,6 +260,16 @@ class install_update extends module
 				if ($this->unequal_version)
 				{
 					$template->assign_var('PACKAGE_VERSION', $this->update_info['version']['to']);
+				}
+
+				// Since some people try to update to RC releases, but phpBB.com tells them the last version is the version they currently run
+				// we are faced with the updater thinking the database schema is up-to-date; which it is, but should be updated none-the-less
+				// We now try to cope with this by triggering the update process
+				if (version_compare(str_replace('rc', 'RC', strtolower($this->current_version)), str_replace('rc', 'RC', strtolower($this->update_info['version']['to'])), '<'))
+				{
+					$template->assign_vars(array(
+						'S_UP_TO_DATE'		=> false,
+					));
 				}
 
 			break;
@@ -687,7 +697,7 @@ class install_update extends module
 										default:
 											$diff = $this->return_diff($this->old_location . $original_filename, $phpbb_root_path . $file_struct['filename'], $this->new_location . $original_filename);
 
-											$contents = implode("\n", $diff->merged_new_output());
+											$contents = implode("\n", $diff->merged_output());
 											unset($diff);
 										break;
 									}
@@ -915,6 +925,11 @@ class install_update extends module
 				// Now init the connection
 				if ($update_mode == 'download')
 				{
+					if (function_exists('phpbb_is_writable') && !phpbb_is_writable($phpbb_root_path . 'store/'))
+					{
+						trigger_error(sprintf('The directory “%s” is not writable.', $phpbb_root_path . 'store/'), E_USER_ERROR);
+					}
+
 					if ($use_method == '.zip')
 					{
 						$compress = new compress_zip('w', $phpbb_root_path . 'store/' . $archive_filename . $use_method);
@@ -1099,24 +1114,6 @@ class install_update extends module
 
 					break;
 
-/*
-						$diff = $this->return_diff($this->old_location . $original_file, $phpbb_root_path . $file, $this->new_location . $original_file);
-
-						$tmp = array(
-							'file1'		=> array(),
-							'file2'		=> ($option == MERGE_NEW_FILE) ? implode("\n", $diff->merged_new_output()) : implode("\n", $diff->merged_orig_output()),
-						);
-
-						$diff = new diff($tmp['file1'], $tmp['file2']);
-
-						unset($tmp);
-
-						$template->assign_var('S_DIFF_NEW_FILE', true);
-						$diff_mode = 'inline';
-						$this->page_title = 'VIEWING_FILE_CONTENTS';
-
-					break;
-*/
 					// Merge differences and use new phpBB code for conflicted blocks
 					case MERGE_NEW_FILE:
 					case MERGE_MOD_FILE:
@@ -1170,6 +1167,7 @@ class install_update extends module
 
 					default:
 						$diff = $this->return_diff($this->old_location . $original_file, $phpbb_root_path . $original_file, $this->new_location . $file);
+						$diff = $this->return_diff($phpbb_root_path . $file, $diff->merged_output());
 					break;
 				}
 			break;
@@ -1357,6 +1355,9 @@ class install_update extends module
 			$update_ary['original'] = $original_file;
 		}
 
+		// we only want to know if the files are successfully merged and newlines could result in errors (duplicate addition of lines and such things)
+		// Therefore we check for empty diffs with two methods, preserving newlines and not preserving them (which mostly works best, therefore the first option)
+
 		// On a successfull update the new location file exists but the old one does not exist.
 		// Check for this circumstance, the new file need to be up-to-date with the current file then...
 		if (!file_exists($this->old_location . $original_file) && file_exists($this->new_location . $original_file) && file_exists($phpbb_root_path . $file))
@@ -1396,104 +1397,141 @@ class install_update extends module
 			trigger_error($user->lang['INCOMPLETE_UPDATE_FILES'], E_USER_ERROR);
 		}
 
-		$tmp = array(
-			'file1'		=> file_get_contents($this->old_location . $original_file),
-			'file2'		=> file_get_contents($phpbb_root_path . $file),
-		);
+		$preserve_cr_ary = array(false, true);
 
-		// We need to diff the contents here to make sure the file is really the one we expect
-		$diff = new diff($tmp['file1'], $tmp['file2'], false);
-		$empty_1 = $diff->is_empty();
-
-		unset($tmp, $diff);
-
-		$tmp = array(
-			'file1'		=> file_get_contents($this->new_location . $original_file),
-			'file2'		=> file_get_contents($phpbb_root_path . $file),
-		);
-
-		// We need to diff the contents here to make sure the file is really the one we expect
-		$diff = new diff($tmp['file1'], $tmp['file2'], false);
-		$empty_2 = $diff->is_empty();
-
-		unset($tmp, $diff);
-
-		// If the file is not modified we are finished here...
-		if ($empty_1)
+		foreach ($preserve_cr_ary as $preserve_cr)
 		{
-			// Further check if it is already up to date - it could happen that non-modified files
-			// slip through
+			$tmp = array(
+				'file1'		=> file_get_contents($this->old_location . $original_file),
+				'file2'		=> file_get_contents($phpbb_root_path . $file),
+			);
+
+			// We need to diff the contents here to make sure the file is really the one we expect
+			$diff = new diff($tmp['file1'], $tmp['file2'], $preserve_cr);
+			$empty_1 = $diff->is_empty();
+
+			unset($tmp, $diff);
+
+			$tmp = array(
+				'file1'		=> file_get_contents($this->new_location . $original_file),
+				'file2'		=> file_get_contents($phpbb_root_path . $file),
+			);
+
+			$diff = new diff($tmp['file1'], $tmp['file2'], $preserve_cr);
+			$empty_2 = $diff->is_empty();
+
+			unset($tmp, $diff);
+
+			// If the file is not modified we are finished here...
+			if ($empty_1)
+			{
+				// Further check if it is already up to date - it could happen that non-modified files
+				// slip through
+				if ($empty_2)
+				{
+					$update_list['up_to_date'][] = $update_ary;
+					return;
+				}
+
+				$update_list['not_modified'][] = $update_ary;
+				return;
+			}
+
+			// If the file had been modified then we need to check if it is already up to date
+
+			// if there are no differences we have an up-to-date file...
 			if ($empty_2)
 			{
 				$update_list['up_to_date'][] = $update_ary;
 				return;
 			}
-
-			$update_list['not_modified'][] = $update_ary;
-			return;
 		}
 
-		// If the file had been modified then we need to check if it is already up to date
+		$conflicts = false;
 
-		// if there are no differences we have an up-to-date file...
-		if ($empty_2)
+		foreach ($preserve_cr_ary as $preserve_cr)
 		{
-			$update_list['up_to_date'][] = $update_ary;
-			return;
-		}
-
-		// if the file is modified we try to make sure a merge succeed
-		$tmp = array(
-			'file1'		=> file_get_contents($this->old_location . $original_file),
-			'file2'		=> file_get_contents($phpbb_root_path . $file),
-			'file3'		=> file_get_contents($this->new_location . $original_file),
-		);
-
-		$diff = new diff3($tmp['file1'], $tmp['file2'], $tmp['file3'], false);
-
-		unset($tmp);
-
-		if ($diff->get_num_conflicts())
-		{
-			$update_ary['conflicts'] = $diff->get_num_conflicts();
-
-			// There is one special case... users having merged with a conflicting file... we need to check this
+			// if the file is modified we try to make sure a merge succeed
 			$tmp = array(
-				'file1'		=> file_get_contents($phpbb_root_path . $file),
-				'file2'		=> implode("\n", $diff->merged_orig_output()),
+				'orig'		=> file_get_contents($this->old_location . $original_file),
+				'final1'	=> file_get_contents($phpbb_root_path . $file),
+				'final2'	=> file_get_contents($this->new_location . $original_file),
 			);
 
-			$diff = new diff($tmp['file1'], $tmp['file2'], false);
-			$empty = $diff->is_empty();
+			$diff = new diff3($tmp['orig'], $tmp['final1'], $tmp['final2'], $preserve_cr);
+			unset($tmp);
 
-			if ($empty)
+			if (!$diff->get_num_conflicts())
 			{
-				unset($update_ary['conflicts']);
-				unset($diff);
-				$update_list['up_to_date'][] = $update_ary;
-				return;
+				$tmp = array(
+					'file1'		=> file_get_contents($phpbb_root_path . $file),
+					'file2'		=> implode("\n", $diff->merged_output()),
+				);
+
+				// now compare the merged output with the original file to see if the modified file is up to date
+				$diff2 = new diff($tmp['file1'], $tmp['file2'], $preserve_cr);
+				$empty = $diff2->is_empty();
+
+				unset($diff, $diff2);
+
+				if ($empty)
+				{
+					$update_list['up_to_date'][] = $update_ary;
+					return;
+				}
+
+				// If we preserve cr tag it as modified because the conflict would not show in this mode anyway
+				if ($preserve_cr)
+				{
+					$update_list['modified'][] = $update_ary;
+					return;
+				}
 			}
+			else
+			{
+				// There is one special case... users having merged with a conflicting file... we need to check this
+				$tmp = array(
+					'file1'		=> file_get_contents($phpbb_root_path . $file),
+					'file2'		=> implode("\n", $diff->merged_new_output()),
+				);
 
-			$update_list['conflict'][] = $update_ary;
-			unset($diff);
+				$diff2 = new diff($tmp['file1'], $tmp['file2'], $preserve_cr);
+				$empty = $diff2->is_empty();
 
-			return;
+				if (!$empty)
+				{
+					unset($tmp, $diff2);
+
+					// We check if the user merged with his output
+					$tmp = array(
+						'file1'		=> file_get_contents($phpbb_root_path . $file),
+						'file2'		=> implode("\n", $diff->merged_orig_output()),
+					);
+
+					$diff2 = new diff($tmp['file1'], $tmp['file2'], $preserve_cr);
+					$empty = $diff2->is_empty();
+				}
+
+				if (!$empty)
+				{
+					$conflicts = $diff->get_num_conflicts();
+				}
+
+				unset($diff, $diff2);
+
+				if ($empty)
+				{
+					// A conflict got resolved...
+					$update_list['up_to_date'][] = $update_ary;
+					return;
+				}
+			}
 		}
 
-		$tmp = array(
-			'file1'		=> file_get_contents($phpbb_root_path . $file),
-			'file2'		=> implode("\n", $diff->merged_new_output()),
-		);
-
-		// now compare the merged output with the original file to see if the modified file is up to date
-		$diff = new diff($tmp['file1'], $tmp['file2'], false);
-		$empty = $diff->is_empty();
-
-		if ($empty)
+		if ($conflicts !== false)
 		{
-			unset($diff);
-
-			$update_list['up_to_date'][] = $update_ary;
+			$update_ary['conflicts'] = $conflicts;
+			$update_list['conflict'][] = $update_ary;
 			return;
 		}
 
@@ -1551,7 +1589,7 @@ class install_update extends module
 				if ($info === false)
 				{
 					$update_info = array();
-					include($phpbb_root_path . 'install/update/index.php');
+					include($phpbb_root_path . 'install/update/index.' . $phpEx);
 					$info = (empty($update_info) || !is_array($update_info)) ? false : $update_info;
 
 					if ($info !== false)
@@ -1565,13 +1603,19 @@ class install_update extends module
 				global $phpbb_root_path, $phpEx;
 
 				$update_info = array();
-				include($phpbb_root_path . 'install/update/index.php');
+				include($phpbb_root_path . 'install/update/index.' . $phpEx);
 
 				$info = (empty($update_info) || !is_array($update_info)) ? false : $update_info;
 				$errstr = ($info === false) ? $user->lang['WRONG_INFO_FILE_FORMAT'] : '';
 
 				if ($info !== false)
 				{
+					// We assume that all file extensions have been renamed to .$phpEx,
+					// if someone is using a non .php file extension for php files.
+					// However, in $update_info['files'] we use hardcoded .php.
+					// We therefore replace .php with .$phpEx.
+					$info['files'] = preg_replace('/\.php$/i', ".$phpEx", $info['files']);
+
 					// Adjust the update info file to hold some specific style-related information
 					$info['custom'] = array();
 /*
@@ -1639,7 +1683,7 @@ class install_update extends module
 	/**
 	* Wrapper for returning a diff object
 	*/
-	function &return_diff()
+	function return_diff()
 	{
 		$args = func_get_args();
 		$three_way_diff = (func_num_args() > 2) ? true : false;

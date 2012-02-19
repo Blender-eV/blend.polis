@@ -31,8 +31,8 @@ unset($dbpasswd);
 */
 $convertor_data = array(
 	'forum_name'	=> 'phpBB 2.0.x',
-	'version'		=> '1.0.2',
-	'phpbb_version'	=> '3.0.4',
+	'version'		=> '1.0.3',
+	'phpbb_version'	=> '3.0.6',
 	'author'		=> '<a href="http://www.phpbb.com/">phpBB Group</a>',
 	'dbms'			=> $dbms,
 	'dbhost'		=> $dbhost,
@@ -129,7 +129,7 @@ $config_schema = array(
 		'board_timezone'		=> 'board_timezone',
 		'allow_privmsg'			=> 'not(privmsg_disable)',
 		'gzip_compress'			=> 'gzip_compress',
-		'coppa_enable'			=> 'is_empty(coppa_mail)',
+		'coppa_enable'			=> '!is_empty(coppa_mail)',
 		'coppa_fax'				=> 'coppa_fax',
 		'coppa_mail'			=> 'coppa_mail',
 		'record_online_users'	=> 'record_online_users',
@@ -611,6 +611,7 @@ if (!$get_info)
 				'query_first'	=> array('target', $convert->truncate_statement . POSTS_TABLE),
 				'execute_first'	=> '
 					$config["max_post_chars"] = 0;
+					$config["min_post_chars"] = 0;
 					$config["max_quote_depth"] = 0;
 				',
 
@@ -660,6 +661,7 @@ if (!$get_info)
 
 				'execute_first'	=> '
 					$config["max_post_chars"] = 0;
+					$config["min_post_chars"] = 0;
 					$config["max_quote_depth"] = 0;
 				',
 
