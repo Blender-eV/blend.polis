@@ -537,6 +537,50 @@ if ($config['allow_bookmarks'] && $user->data['is_registered'] && request_var('b
 	trigger_error($message);
 }
 
+// Topic solved handling
+if ($user->data['user_id'] != ANONYMOUS && !$user->data['is_bot'])
+{
+	if (request_var('solve', 0))
+	{
+		// Toggle
+		if ($topic_data['topic_solved'])
+		{
+			$l_topic_solved = $user->lang['TOPIC_SOLVED_SET'];
+			$solved = 0;
+		}
+		else
+		{
+			$l_topic_solved = $user->lang['TOPIC_SOLVED_UNSET'];
+			$solved = 1;
+		}
+
+		$sql = 'UPDATE ' . TOPICS_TABLE . "
+			SET topic_solved = $solved
+			WHERE topic_id = $topic_id";
+		$db->sql_query($sql);
+	}
+	else
+	{
+		// Show
+		if ($topic_data['topic_solved'])
+		{
+			$l_topic_solved = $user->lang['TOPIC_SOLVED_UNSET'];
+		}
+		else
+		{
+			$l_topic_solved = $user->lang['TOPIC_SOLVED_SET'];
+		}
+	}
+
+	$u_topic_solved = $viewtopic_url . '&amp;solve=1';
+}
+else
+{
+	// Guests and bots don't see anything
+	$l_topic_solved = '';
+	$u_topic_solved = '';
+}
+
 // Grab ranks
 $ranks = $cache->obtain_ranks();
 
@@ -681,6 +725,9 @@ $template->assign_vars(array(
 	'U_WATCH_TOPIC' 		=> $s_watching_topic['link'],
 	'L_WATCH_TOPIC' 		=> $s_watching_topic['title'],
 	'S_WATCHING_TOPIC'		=> $s_watching_topic['is_watching'],
+
+	'U_TOPIC_SOLVED'		=> $u_topic_solved,
+	'L_TOPIC_SOLVED'		=> $l_topic_solved,
 
 	'U_BOOKMARK_TOPIC'		=> ($user->data['is_registered'] && $config['allow_bookmarks']) ? $viewtopic_url . '&amp;bookmark=1&amp;hash=' . generate_link_hash("topic_$topic_id") : '',
 	'L_BOOKMARK_TOPIC'		=> ($user->data['is_registered'] && $config['allow_bookmarks'] && $topic_data['bookmarked']) ? $user->lang['BOOKMARK_TOPIC_REMOVE'] : $user->lang['BOOKMARK_TOPIC'],

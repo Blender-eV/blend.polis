@@ -183,6 +183,8 @@ $lang = array_merge($lang, array(
 	'SMILIES_LIMIT_EXPLAIN'			=> 'Maximum number of smilies in a post. Set to 0 for unlimited smilies.',
 	'SMILIES_PER_PAGE'				=> 'Smilies per page',
 	'TOPICS_PER_PAGE'				=> 'Topics per page',
+	'SOLVED_IMG'					=> 'Solved-image',
+	'SOLVED_IMG_EXPLAIN'			=> 'This image will be displayed in front of solved topics in the topics list.',
 ));
 
 // Signature Settings
