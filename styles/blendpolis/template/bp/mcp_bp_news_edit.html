@@ -1,0 +1,17 @@
+<!-- INCLUDE mcp_header.html -->
+<h2>{TITLE} (TODO: Template anständig stylen)</h2>
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<form method="post" id="news_edit" action="{U_POST_ACTION}">	
+	<div><input type="hidden" name="id" value="{NEWS_ID}" /><input type="text" name="title" value="{NEWS_TITLE}" />  
+	<input type="text" name="date" value="{NEWS_DATE}" />
+	<textarea name="text">{NEWS_TEXT}</textarea>
+	<fieldset class="submit-buttons">
+		{S_HIDDEN_FIELDS}<input type="reset" value="{L_RESET}" name="reset" class="button2" />&nbsp; 
+		<input type="submit" name="action[add_feedback]" value="{L_SUBMIT}" class="button1" />
+	</fieldset>
+	</div>
+	</form>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- INCLUDE mcp_footer.html -->

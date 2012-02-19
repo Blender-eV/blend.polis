@@ -1,0 +1,40 @@
+<!-- INCLUDE ucp_header.html -->
+<h2>{L_TITLE}</h2>
+<div class="panel">
+<div class="inner"><span class="corners-top"><span></span></span>
+<p>{L_BP_UPLOAD_HINWEIS}</p>
+<form id="ucp_hello" method="post" action="{U_ACTION}" enctype="multipart/form-data">
+	<fieldset>
+		<dl>
+			<dt><label for="file">{L_FILE}:</label><br /><span>{L_FILE_EXPLAIN}</span></dt>
+			<dd><input name="file" type="file" id="file" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="overwrite">{L_OVERWRITE}:</label><br /><span>{L_OVERWRITE_EXPLAIN}</span></dt>
+			<dd><input name="overwrite" type="checkbox" id="overwrite" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="cats">{L_CATEGORIES}:</label><br /><span>{L_CATEGORIES_EXPLAIN}</span></dt>
+			<dd><select multiple="multiple" name="kategorien" id="cats">
+				<!-- BEGIN catrow -->
+				<option value="{catrow.S_CATID}">{catrow.S_CATNAME}</option>
+				<!-- END catrow -->
+			</select></dd>
+		</dl>
+		<dl>
+			<dt><label for="title">{L_IMGTITLE}:</label><br /><span>{L_IMGTITLE_EXPLAIN}</span></dt>
+			<dd><input name="title" type="text" id="title" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="comment">{L_COMMENT}:</label><br /><span>{L_COMMENT_EXPLAIN}</span></dt>
+			<dd><textarea name="comment" type="text" id="comment"></textarea></dd>
+		</dl>
+	</fieldset>
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+	</p>
+</form>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- INCLUDE ucp_footer.html -->

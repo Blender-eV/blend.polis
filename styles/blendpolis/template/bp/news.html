@@ -1,0 +1,13 @@
+<!-- INCLUDE overall_header.html -->
+
+<p class="right<!-- IF S_USER_LOGGED_IN --> rightside<!-- ENDIF -->"><!-- IF S_USER_LOGGED_IN -->{LAST_VISIT_DATE}<!-- ELSE -->{CURRENT_TIME}<!-- ENDIF --></p>
+<!-- IF U_MCP --><p>{CURRENT_TIME} <br />[&nbsp;<a href="{U_MCP}">{L_MCP}</a>&nbsp;]</p><!-- ELSEIF S_USER_LOGGED_IN --><p>{CURRENT_TIME}</p><!-- ENDIF -->
+
+<!-- BEGIN newsrow -->
+	<div style="width:400px;margin:auto;border:1px solid white">
+		<div style="float:right">{newsrow.NEWS_DATE}</div>{newsrow.NEWS_TITLE}
+		<div>{newsrow.NEWS_TEXT}</div>
+	</div>
+<!-- END newsrow -->
+
+<!-- INCLUDE overall_footer.html -->

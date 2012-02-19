@@ -1,0 +1,18 @@
+		<div style="width:100%;text-align:center">
+			<div><a href="{HREF_FULLSIZE}" onfocus="blur()"><img src="{VIEWSIZE}" alt="" title="{TITLE}" /></a></div>
+			<div>{TITLE}</div>
+			<div>{L_USER}: <a href="{HREF_USER}" onfocus="blur()">{USERNAME}</a> &bull; {L_RATING}: {RATING} ({RATING_COUNT} {L_RATING_COUNT}) &bull; {L_DATE}: {DATE}</div>
+			<div>{COMMENT}</div>
+		</div>
+<!-- BEGIN commentrow -->
+		<hr class="divider" />
+		<div class="post bg1"><div class="inner"><span class="corners-top"><span></span></span>
+			<a href="{commentrow.HREF_USER}" onfocus="blur()">{commentrow.UNAME}</a><br/>{commentrow.TEXT}
+		<span class="corners-bottom"><span></span></span></div></div>
+<!-- BEGINELSE -->
+	<div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		<strong>{L_NO_COMMENTS}</strong>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- END commentrow -->

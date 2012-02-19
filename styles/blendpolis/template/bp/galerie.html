@@ -1,0 +1,12 @@
+<!-- INCLUDE overall_header.html -->
+<!-- IF U_MCP --><p>[&nbsp;<a href="{U_MCP}">{L_MCP}</a>&nbsp;]</p><!-- ELSEIF S_USER_LOGGED_IN --><p>{CURRENT_TIME}</p><!-- ENDIF -->
+<h2>{GAL_NAVIGATION}</h2>
+<div><strong>{L_CATEGORIES}:</strong> {CATEGORIES}</div>
+<!-- IF MODE_IMAGE -->
+	<!-- INCLUDE bp/galerie_bild.html -->
+<!-- ELSEIF MODE_USER -->
+	<!-- INCLUDE bp/galerie_user.html -->
+<!-- ELSE -->
+	<!-- INCLUDE bp/galerie_startseite.html -->
+<!-- ENDIF -->
+<!-- INCLUDE overall_footer.html -->
