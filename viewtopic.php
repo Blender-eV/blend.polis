@@ -1772,7 +1772,7 @@ if (empty($_REQUEST['t']) && !empty($topic_id))
 }
 
 // Output the page
-page_header($user->lang['VIEW_TOPIC'] . ' - ' . $topic_data['topic_title'], true, $forum_id);
+page_header($topic_data['topic_title'] . ' - ' . $user->lang['VIEW_TOPIC'], true, $forum_id);
 
 $template->set_filenames(array(
 	'body' => ($view == 'print') ? 'viewtopic_print.html' : 'viewtopic_body.html')
