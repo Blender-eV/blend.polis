@@ -1299,6 +1299,13 @@ dl.codebox code {
 .syntaxkeyword	{ color: #585858; }
 .syntaxstring	{ color: #a7a7a7; }
 
+kbd {
+	border: 0.2em solid;
+	border-color: #464646 #363636 #363636 #464646;
+	padding: 0 0.4em;
+	background: #555;
+}
+
 /* Attachments
 ----------------------------------------*/
 .attachbox {
