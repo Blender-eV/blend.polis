@@ -1031,3 +1031,14 @@ CREATE TABLE phpbb_zebra (
 ) CHARACTER SET `utf8` COLLATE `utf8_bin`;
 
 
+# Table: 'bp_hottopics'
+CREATE TABLE bp_hottopics (
+	slot_id tinyint(3) DEFAULT '0' NOT NULL,
+	topic_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
+	forum_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
+	image_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
+	last_update int(11) UNSIGNED DEFAULT '0' NOT NULL,
+	PRIMARY KEY (slot_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+
