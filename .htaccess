@@ -1,10 +1,41 @@
+# mod_deflate basic
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+RewriteEngine On
+# www erzwingen
+RewriteCond %{HTTP_HOST} !^www\.blendpolis\.de$ [NC]
+RewriteCond %{HTTP_HOST} !^blendpolis\.localhost$ [NC]
+RewriteRule ^(.*)$ http://www.blendpolis.de/$1 [R=301,L]
+
+# redirects, damit google etc nicht auf 404 stoßen
+RewriteCond %{QUERY_STRING} !norewrite
+RewriteRule ^f/index.php /index.php [QSA,L,R=301]
+RewriteRule ^f/viewforum.php /viewforum.php [QSA,R=301,L]
+RewriteRule ^f/viewtopic.php /viewtopic.php [QSA,R=301,L]
+RewriteRule ^f/viewforum.php /viewforum.php [QSA,R=301,L]
+
+# clean urls (atm nicht aktiviert)
+# viewforum
+RewriteRule ^viewforum,f-([0-9]+)$   viewforum.php?f=$1 [L]
+RewriteRule ^viewforum,f-([0-9]+),sd-([^,]+),sk-([^,]+),st-([0-9]+),start-([0-9]+)$   viewforum.php?f=$1&start=$5&st=$4&sk=$3&sd=$2 [L]
+
+# viewonline
+RewriteRule ^viewonline$   viewonline.php [L]
+
+# viewtopic, QSA wegen print-version
+RewriteRule ^viewtopic,f-([0-9]+),t-([0-9]+)   viewtopic.php?f=$1&t=$2 [QSA,L]
+RewriteRule ^viewtopic,f-([0-9]+),p-([0-9]+)   viewtopic.php?f=$1&p=$2 [QSA,L]
+RewriteRule ^viewtopic,f-([0-9]+),sd-([^,]+),sk-([^,]+),st-([0-9]+),start-([0-9]+),t-([0-9]+)   viewtopic.php?f=$1&t=$6&start=$5&st=$4&sk=$3&sd=$2 [QSA,L]
+
 #
 # Uncomment the statement below if you want to make use of
 # HTTP authentication and it does not already work.
 # This could be required if you are for example using PHP via Apache CGI.
 #
 #<IfModule mod_rewrite.c>
-#RewriteEngine on
 #RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
 #</IfModule>
 
