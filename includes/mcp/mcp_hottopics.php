@@ -55,7 +55,7 @@ class mcp_hottopics
 					$topic_id = request_var('hot_topicid', 0);
 					$row = $this->get_data_from_topic($topic_id);
 					$row['image_id'] = request_var('hot_imageid', '0');
-					$row['updated'] = time();
+					$row['updated'] = date('Y-m-d H:i:s');
 
 					if (is_numeric($row['image_id']))
 					{
@@ -75,7 +75,7 @@ class mcp_hottopics
 						}
 					}
 
-					$sql = "UPDATE bp_hottopics SET topic_id=$topic_id, forum_id={$row[forum_id]}, image_id={$row[image_id]}, last_update={$row[updated]} WHERE slot_id=$slot_id";
+					$sql = "UPDATE bp_hottopics SET topic_id=$topic_id, forum_id={$row[forum_id]}, image_id={$row[image_id]}, last_update='{$row[updated]}' WHERE slot_id=$slot_id";
 					$db->sql_query($sql);
 
 				}
