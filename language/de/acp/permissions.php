@@ -4,12 +4,12 @@
 * acp_permissions [Deutsch — Du]
 *
 * @package language
-* @version $Id: permissions.php 464 2010-06-15 14:47:22Z tuxman $
+* @version $Id: permissions.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -56,7 +56,7 @@ $lang = array_merge($lang, array(
 
 		<br />
 
-		<p>Für weitere Informationen über die Einrichtung und Verwaltung von Berechtigungen auf deinem phpBB3-Board siehe bitte <a href="http://www.phpbb.com/support/documentation/3.0/quickstart/quick_permissions.html">Kapitel 1.5 der Schnellstartanleitung (englisch)</a> (<a href="http://www.phpbb.de/go/3/berechtigungen">deutsche Übersetzung</a>) nach.</p>
+		<p>Für weitere Informationen über die Einrichtung und Verwaltung von Berechtigungen auf deinem phpBB3-Board siehe bitte <a href="https://www.phpbb.com/support/documentation/3.0/quickstart/quick_permissions.html">Kapitel 1.5 der Schnellstartanleitung (englisch)</a> (<a href="https://www.phpbb.de/go/3/berechtigungen">deutsche Übersetzung</a>) nach.</p>
 	',
 
 	'ACL_NEVER'				=> 'Nie',
@@ -174,7 +174,7 @@ $lang = array_merge($lang, array(
 	'ROLE_FORUM_POLLS'			=> 'Standard-Zugang + Umfragen',
 	'ROLE_FORUM_READONLY'		=> 'Nur lesender Zugriff',
 	'ROLE_FORUM_STANDARD'		=> 'Standard-Zugang',
-	'ROLE_FORUM_NEW_MEMBER'		=> 'Neu registrierte Benutzer',
+	'ROLE_FORUM_NEW_MEMBER'		=> 'Zugang für neu registrierte Benutzer',
 	'ROLE_MOD_FULL'				=> 'Umfassender Moderator',
 	'ROLE_MOD_QUEUE'			=> 'Warteschlangen-Moderator',
 	'ROLE_MOD_SIMPLE'			=> 'Einfacher Moderator',
@@ -184,7 +184,7 @@ $lang = array_merge($lang, array(
 	'ROLE_USER_NOAVATAR'		=> 'Kein Avatar',
 	'ROLE_USER_NOPM'			=> 'Keine Privaten Nachrichten',
 	'ROLE_USER_STANDARD'		=> 'Standard-Funktionalität',
-	'ROLE_USER_NEW_MEMBER'		=> 'Neu registrierte Benutzer',
+	'ROLE_USER_NEW_MEMBER'		=> 'Funktionalitäten für neu registrierte Benutzer',
 
 	'ROLE_DESCRIPTION_ADMIN_FORUM'			=> 'Kann auf die Foren-Verwaltung und die Foren-Berechtigungen zugreifen.',
 	'ROLE_DESCRIPTION_ADMIN_FULL'			=> 'Hat Zugriff auf alle Administrator-Funktionen des Boards.<br />Verwendung wird nicht empfohlen.',
@@ -275,7 +275,7 @@ $lang = array_merge($lang, array(
 	'TRACE_WHO'								=> 'Wer',
 	'TRACE_TOTAL'							=> 'Ergebnis',
 
-	'USERS_NOT_ASSIGNED'			=> 'Keinem Benutzer ist diese Rolle zugewiesen.',
+	'USERS_NOT_ASSIGNED'			=> 'Diese Rolle ist keinem Benutzer zugewiesen.',
 	'USER_IS_MEMBER_OF_DEFAULT'		=> 'ist Mitglied folgender Systemgruppen',
 	'USER_IS_MEMBER_OF_CUSTOM'		=> 'ist Mitglied folgender benutzerdefinierter Gruppen',
 

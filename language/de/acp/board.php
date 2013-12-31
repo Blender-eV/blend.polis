@@ -4,12 +4,12 @@
 * acp_board [Deutsch — Du]
 *
 * @package language
-* @version $Id: board.php 581 2011-11-22 19:15:46Z philippk $
+* @version $Id: board.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -111,7 +111,7 @@ $lang = array_merge($lang, array(
 	'MAX_AVATAR_SIZE'				=> 'Maximale Abmessungen für Avatare',
 	'MAX_AVATAR_SIZE_EXPLAIN'		=> 'Breite &times; Höhe in Pixel',
 	'MAX_FILESIZE'					=> 'Maximale Dateigröße',
-	'MAX_FILESIZE_EXPLAIN'			=> 'Für hochgeladene Avatare.',
+	'MAX_FILESIZE_EXPLAIN'			=> 'Für hochgeladene Avatare. Bei 0 wird die Dateigröße nur durch die PHP-Konfiguration limitiert.',
 	'MIN_AVATAR_SIZE'				=> 'Minimale Abmessungen für Avatare',
 	'MIN_AVATAR_SIZE_EXPLAIN'		=> 'Breite &times; Höhe in Pixel',
 ));
@@ -397,7 +397,7 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_EMAIL'					=> 'Das angegebene E-Mail-Attribut existiert nicht.',
 	'LDAP_NO_IDENTITY'				=> 'Kann keine Anmeldekennung für %s finden.',
 	'LDAP_PASSWORD'					=> 'LDAP-Passwort',
-	'LDAP_PASSWORD_EXPLAIN'			=> 'Lasse das Feld für eine anonyme Verbindung frei; ansonsten gebe das Passwort für obigen Benutzer an. Erforderlich bei Active Directory-Servern.<br/><em><strong>WARNUNG:</strong> Dieses Passwort wird im Klartext in der Datenbank gespeichert und ist daher für jeden einsehbar, der Zugriff auf die Datenbank oder diese Konfigurationsseite hat.</em>',
+	'LDAP_PASSWORD_EXPLAIN'			=> 'Lasse das Feld für eine anonyme Verbindung frei; ansonsten gib das Passwort für obigen Benutzer an. Erforderlich bei Active Directory-Servern.<br /><em><strong>WARNUNG:</strong> Dieses Passwort wird im Klartext in der Datenbank gespeichert und ist daher für jeden einsehbar, der Zugriff auf die Datenbank oder diese Konfigurationsseite hat.</em>',
 	'LDAP_PORT'						=> 'Port des LDAP-Servers',
 	'LDAP_PORT_EXPLAIN'				=> 'Du kannst optional einen Port angeben, der statt dem Standardport 389 für die Verbindung zum LDAP-Server verwendet werden soll.',
 	'LDAP_SERVER'					=> 'LDAP-Server-Name',
@@ -547,7 +547,7 @@ $lang = array_merge($lang, array(
 	'JAB_USE_SSL'				=> 'Mit SSL verbinden',
 	'JAB_USE_SSL_EXPLAIN'		=> 'Wenn aktiviert, wird versucht, eine sichere Verbindung zu verwenden. Der Jabber-Port wird auf 5223 geändert, sofern Port 5222 angegeben ist.',
 	'JAB_USERNAME'				=> 'Jabber-Benutzername oder JID',
-	'JAB_USERNAME_EXPLAIN'		=> 'Gebe einen bereits registrierten Benutzernamen oder eine gültige JID an. Der Benutzername wird nicht auf Gültigkeit geprüft. Wenn du nur einen Benutzernamen angibst, wird die JID aus dem Benutzernamen und dem oben festgelegten Server ermittelt. Gebe ansonsten eine gültige JID wie <samp>user@jabber.org</samp> ein.',
+	'JAB_USERNAME_EXPLAIN'		=> 'Gib einen bereits registrierten Benutzernamen oder eine gültige JID an. Der Benutzername wird nicht auf Gültigkeit geprüft. Wenn du nur einen Benutzernamen angibst, wird die JID aus dem Benutzernamen und dem oben festgelegten Server ermittelt. Gebe ansonsten eine gültige JID wie <samp>user@jabber.org</samp> ein.',
 ));
 
 ?>

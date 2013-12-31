@@ -4,12 +4,12 @@
 * recaptcha [Deutsch — Du]
 *
 * @package language
-* @version $Id: captcha_recaptcha.php 568 2011-06-17 20:23:47Z philippk $
+* @version $Id: captcha_recaptcha.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2009 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 

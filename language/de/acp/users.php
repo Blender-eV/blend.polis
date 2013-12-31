@@ -4,12 +4,12 @@
 * acp_users [Deutsch — Du]
 *
 * @package language
-* @version $Id: users.php 513 2010-11-13 22:13:34Z tuxman $
+* @version $Id: users.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -62,7 +62,7 @@ $lang = array_merge($lang, array(
 
 	'DELETE_POSTS'			=> 'Beiträge löschen',
 	'DELETE_USER'			=> 'Benutzer löschen',
-	'DELETE_USER_EXPLAIN'	=> 'Bitte beachte, dass das Löschen eines Benutzers endgültig ist und nicht rückgängig gemacht werden kann.',
+	'DELETE_USER_EXPLAIN'	=> 'Bitte beachte, dass das Löschen eines Benutzers endgültig ist und nicht rückgängig gemacht werden kann. Ungelesende Private Nachrichten, die der Benutzer geschrieben hat, werden gelöscht und können nicht mehr durch die Empfänger abgerufen werden.',
 
 	'FORCE_REACTIVATION_SUCCESS'	=> 'Erneute Aktivierung des Benutzerkontos erfolgreich erzwungen.',
 	'FOUNDER'						=> 'Gründer',
@@ -127,6 +127,7 @@ $lang = array_merge($lang, array(
 	'USER_GROUP_SPECIAL'			=> 'Systemgruppen, in denen der Benutzer Mitglied ist',
 	'USER_LIFTED_NR'				=> 'Benutzer erfolgreich aus der Gruppe der kürzlich registrierten Benutzer entfernt.',
 	'USER_NO_ATTACHMENTS'			=> 'Es gibt keine angehängten Dateien, die angezeigt werden könnten.',
+	'USER_NO_POSTS_TO_DELETE'		=> 'Der Benutzer hat keine Beiträge, die beibehalten oder gelöscht werden könnten.',
 	'USER_OUTBOX_EMPTIED'			=> 'Der Postausgang des Benutzers für Private Nachrichten wurde erfolgreich geleert.',
 	'USER_OUTBOX_EMPTY'				=> 'Der Postausgang des Benutzers für Private Nachrichten war bereits leer.',
 	'USER_OVERVIEW_UPDATED'			=> 'Benutzerdaten erfolgreich geändert.',

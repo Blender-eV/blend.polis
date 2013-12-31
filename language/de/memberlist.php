@@ -4,12 +4,12 @@
 * memberlist [Deutsch — Du]
 *
 * @package language
-* @version $Id: memberlist.php 565 2011-06-14 20:43:48Z philippk $
+* @version $Id: memberlist.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -113,7 +113,6 @@ $lang = array_merge($lang, array(
 
 	'POST_IP'				=> 'Erstellt von IP/Domain',
 
-	'RANK'					=> 'Rang',
 	'REAL_NAME'				=> 'Name des Empfängers',
 	'RECIPIENT'				=> 'Empfänger',
 	'REMOVE_FOE'			=> 'Aus der Liste der ignorierten Mitglieder entfernen',

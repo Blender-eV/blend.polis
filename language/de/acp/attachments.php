@@ -4,12 +4,12 @@
 * acp_attachments [Deutsch — Du]
 *
 * @package language
-* @version $Id: attachments.php 510 2010-11-13 12:29:18Z philippk $
+* @version $Id: attachments.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -60,7 +60,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_EXT_GROUPS_URL'				=> 'Dateityp-Gruppen',
 	'ATTACH_ID'							=> 'ID',
 	'ATTACH_MAX_FILESIZE'				=> 'Maximale Dateigröße',
-	'ATTACH_MAX_FILESIZE_EXPLAIN'		=> 'Maximale Größe pro Datei; 0 bedeutet unbegrenzt.',
+	'ATTACH_MAX_FILESIZE_EXPLAIN'		=> 'Maximale Größe pro Datei; bei 0 wird die Dateigröße nur durch die PHP-Konfiguration limitiert.',
 	'ATTACH_MAX_PM_FILESIZE'			=> 'Maximale Dateigröße in Privaten Nachrichten',
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Maximale Größe pro Datei in Privaten Nachrichten; 0 bedeutet unbegrenzt.',
 	'ATTACH_ORPHAN_URL'					=> 'Verwaiste Dateianhänge',

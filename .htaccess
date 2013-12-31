@@ -36,6 +36,7 @@ RewriteRule ^viewtopic,f-([0-9]+),sd-([^,]+),sk-([^,]+),st-([0-9]+),start-([0-9]
 # This could be required if you are for example using PHP via Apache CGI.
 #
 #<IfModule mod_rewrite.c>
+#RewriteEngine on
 #RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
 #</IfModule>
 

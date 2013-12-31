@@ -4,12 +4,12 @@
 * acp_modules [Deutsch — Du]
 *
 * @package language
-* @version $Id: modules.php 464 2010-06-15 14:47:22Z tuxman $
+* @version $Id: modules.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -44,7 +44,7 @@ $lang = array_merge($lang, array(
 	'ADD_MODULE_CONFIRM'			=> 'Bist du dir sicher, dass du das gewählte Modul in diesem Modus hinzufügen möchtest?',
 	'ADD_MODULE_TITLE'				=> 'Modul hinzufügen',
 
-	'CANNOT_REMOVE_MODULE'	=> 'Das Modul konnte nicht entfernt werden, weil es ihm zugehörige Untermodule hat. Bitte entfern oder verschieb alle Untermodule, bevor du diese Aktion durchführst.',
+	'CANNOT_REMOVE_MODULE'	=> 'Das Modul konnte nicht entfernt werden, weil es ihm zugehörige Untermodule hat. Bitte entferne oder verschiebe alle Untermodule, bevor du diese Aktion durchführst.',
 	'CATEGORY'				=> 'Kategorie',
 	'CHOOSE_MODE'			=> 'Methode des Moduls',
 	'CHOOSE_MODE_EXPLAIN'	=> 'Wähle die Methode, die das Modul nutzen soll.',
@@ -72,7 +72,7 @@ $lang = array_merge($lang, array(
 	'MODULE_LANGNAME_EXPLAIN'	=> 'Name des anzuzeigenden Moduls. Du kannst eine Sprachvariable nutzen, wenn der Name in einer Sprachdatei definiert ist.',
 	'MODULE_TYPE'				=> 'Modul-Typ',
 
-	'NO_CATEGORY_TO_MODULE'	=> 'Die Kategorie konnte nicht in ein Modul umgewandelt werden. Bitte entfern/verschieb alle Untermodule, bevor du diese Aktion durchführst.',
+	'NO_CATEGORY_TO_MODULE'	=> 'Die Kategorie konnte nicht in ein Modul umgewandelt werden. Bitte entferne oder verschiebe alle Untermodule, bevor du diese Aktion durchführst.',
 	'NO_MODULE'				=> 'Kein Modul gefunden.',
 	'NO_MODULE_ID'			=> 'Keine Modul-ID angegeben.',
 	'NO_MODULE_LANGNAME'	=> 'Kein Modul-Name angegeben.',

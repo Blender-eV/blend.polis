@@ -4,12 +4,12 @@
 * search [Deutsch — Du]
 *
 * @package language
-* @version $Id: search.php 567 2011-06-16 20:29:06Z philippk $
+* @version $Id: search.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -59,7 +59,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Um deine ungelesenen Beiträge anzusehen, musst du auf diesem Board registriert und angemeldet sein.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Um die Beiträge seit deinem letzten Besuch anzusehen, musst du auf diesem Board registriert und angemeldet sein.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Deine Suchanfrage enthält zu viele Wörter. Bitte gebe nicht mehr als %1$d Wörter an.',
+	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Deine Suchanfrage enthält zu viele Wörter. Bitte gib nicht mehr als %1$d Wörter an.',
 
 	'NO_KEYWORDS'			=> 'Du musst mindestens ein Wort angeben, nach dem gesucht werden soll. Jedes Wort muss aus mindestens %d Buchstaben bestehen und darf ohne Platzhalter nicht mehr als %d Buchstaben haben.',
 	'NO_RECENT_SEARCHES'	=> 'In der letzten Zeit wurden keine Suchanfragen durchgeführt.',
@@ -80,6 +80,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Benutzte Suchanfrage',
 	'SEARCHED_TOPIC'			=> 'Durchsuchtes Thema',
+	'SEARCHED_QUERY'			=> 'Suchanfrage',
 	'SEARCH_ALL_TERMS'			=> 'Nach allen Begriffen suchen oder Suche wie angegeben verwenden',
 	'SEARCH_ANY_TERMS'			=> 'Nach einem Begriff suchen',
 	'SEARCH_AUTHOR'				=> 'Zu suchender Autor',

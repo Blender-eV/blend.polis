@@ -4,12 +4,12 @@
 * acp_search [Deutsch — Du]
 *
 * @package language
-* @version $Id: search.php 515 2010-11-13 22:41:00Z philippk $
+* @version $Id: search.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -56,7 +56,7 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Das Backend löscht derzeit seinen Index. Dieser Vorgang kann einige Minuten beanspruchen.',
 
 	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'Die MySQL-Volltextsuche kann nur mit MySQL 4 oder höher verwendet werden.',
-	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'Die MySQL-Volltextsuche kann nur mit MyISAM-Tabellen genutzt werden.',
+	'FULLTEXT_MYSQL_NOT_SUPPORTED'			=> 'Die MySQL-Volltextsuche kann nur mit MyISAM- oder InnoDB-Tabellen genutzt werden. Für eine Volltextsuche mit InnoDB-Tabellen ist MySQL 5.6.4 oder höher erforderlich.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Insgesamt indizierte Beiträge',
 	'FULLTEXT_MYSQL_MBSTRING'				=> 'Unterstützung für nicht-lateinische UTF-8-Zeichen mit mbstring:',
 	'FULLTEXT_MYSQL_PCRE'					=> 'Unterstützung für nicht-lateinische UTF-8-Zeichen mit PCRE:',

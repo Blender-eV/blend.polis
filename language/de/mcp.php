@@ -4,12 +4,12 @@
 * mcp [Deutsch — Du]
 *
 * @package language
-* @version $Id: mcp.php 569 2011-06-17 21:55:44Z tuxman $
+* @version $Id: mcp.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -215,7 +215,6 @@ $lang = array_merge($lang, array(
 	'MERGE_POSTS_CONFIRM'	=> 'Bist du dir sicher, dass du die ausgewählten Beiträge in das ausgewählte Thema verschieben möchtest?',
 	'MERGE_TOPIC_EXPLAIN'	=> 'Mit dem folgenden Formular kannst du Beiträge in ein anderes Thema verschieben. Die Beiträge werden aus diesem Thema entfernt und in das andere Thema integriert. Sie erscheinen dort zusammen mit den anderen Beiträgen in ihrer zeitlichen Abfolge.<br />Bitte gib die ID des Ziel-Themas an oder wähle mit „Thema auswählen“ ein Thema aus.',
 	'MERGE_TOPIC_ID'		=> 'Primärschlüssel (ID) des Ziel-Themas',
-	'MERGE_TOPIC'			=> 'Beiträge verschieben',
 	'MERGE_TOPICS'			=> 'Themen zusammenführen',
 	'MERGE_TOPICS_CONFIRM'	=> 'Bist du dir sicher, dass du die ausgewählten Themen zusammenführen möchtest?',
 	'MODERATE_FORUM'		=> 'Forum moderieren',
