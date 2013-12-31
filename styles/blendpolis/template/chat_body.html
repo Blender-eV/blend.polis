@@ -1,0 +1,57 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2>Chat</h2>
+
+<div class="panel">
+   <div class="inner"><span class="corners-top"><span></span></span>
+
+   <div class="content">
+      <p>Der IRC Chatraum von blend.polis ist erreichbar unter:</p>
+      <p><ul>
+            <li>Server irc.freenode.net</li>
+            <li>Port 6667</li>
+            <li>Raum #blend.polis</li>
+      </ul></p>
+      <p>Alternativ kann man den deutschen Server kornbluth.freenode.net einstellen.</p>
+      <p>Der hier angebotene Java-Client sollte nur in Ausnahmefällen verwendet werden, da die Funktionalität stark eingeschränkt ist.</p>
+      <p style="text-align:center;width:100%">
+         <applet codebase="chat/" code="IRCApplet.class" archive="irc.jar" width="640" height="400">
+            <param name="CABINETS" value="irc.cab,securedirc.cab">
+
+            <param name="nick" value="{USERNAME}">
+            <param name="alternatenick" value="{ALTERNATENICK}">
+            <param name="name" value="{USERNAME}">
+            <param name="host" value="irc.freenode.net">
+            <param name="port" value="6667">
+            <param name="command1" value="/join #blend.polis">
+
+            <param name="timestamp" value="false">
+            <param name="smileys" value="true">
+
+            <param name="highlight" value="true">
+            <param name="highlightnick" value="true">
+
+            <param name="asl" value="true">
+
+            <param name="bitmapsmileys" value="true">
+
+            <param name="channelfont" value="12 Arial">
+            <param name="chanlistfont" value="12 Arial">
+
+            <param name="nickfield" value="true">
+            <param name="useinfo" value="true">
+
+            <param name="styleselector" value="true">
+            <param name="setfontonstyle" value="true">
+
+            <param name="backgroundimage" value="false">
+            <param name="floatingasl" value="true">
+         </applet>
+      </p>
+   </div>
+
+   <span class="corners-bottom"><span></span></span></div>
+</div>
+
+<!-- INCLUDE jumpbox.html -->
+<!-- INCLUDE overall_footer.html -->
