@@ -1827,6 +1827,7 @@ function submit_post($mode, $subject, $username, $topic_type, &$poll, &$data, $u
 				'topic_last_view_time'		=> $current_time,
 				'forum_id'					=> ($topic_type == POST_GLOBAL) ? 0 : $data['forum_id'],
 				'icon_id'					=> $data['icon_id'],
+				'preview_id'				=> (!empty($data['attachment_data'])) ? $data['attachment_data'][0]['attach_id'] : 0,
 				'topic_approved'			=> $post_approval,
 				'topic_title'				=> $subject,
 				'topic_first_poster_name'	=> (!$user->data['is_registered'] && $username) ? $username : (($user->data['user_id'] != ANONYMOUS) ? $user->data['username'] : ''),
@@ -1907,6 +1908,7 @@ function submit_post($mode, $subject, $username, $topic_type, &$poll, &$data, $u
 			$sql_data[TOPICS_TABLE]['sql'] = array(
 				'forum_id'					=> ($topic_type == POST_GLOBAL) ? 0 : $data['forum_id'],
 				'icon_id'					=> $data['icon_id'],
+				'preview_id'				=> (!empty($data['attachment_data'])) ? $data['attachment_data'][0]['attach_id'] : 0,
 				'topic_approved'			=> (!$post_approval) ? 0 : $data['topic_approved'],
 				'topic_title'				=> $subject,
 				'topic_first_poster_name'	=> $username,
