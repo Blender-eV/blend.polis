@@ -1308,5 +1308,18 @@ CREATE TABLE phpbb_zebra (
 );
 
 
+/*
+	Table: 'bp_hottopics'
+*/
+CREATE TABLE bp_hottopics (
+	slot_id INT2 DEFAULT '0' NOT NULL,
+	topic_id INT4 DEFAULT '0' NOT NULL CHECK (topic_id >= 0),
+	forum_id INT4 DEFAULT '0' NOT NULL CHECK (forum_id >= 0),
+	image_id INT4 DEFAULT '0' NOT NULL CHECK (image_id >= 0),
+	last_update INT4 DEFAULT '0' NOT NULL CHECK (last_update >= 0),
+	PRIMARY KEY (slot_id)
+);
+
+
 
 COMMIT;

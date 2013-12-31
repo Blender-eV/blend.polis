@@ -1761,3 +1761,23 @@ ALTER TABLE [phpbb_zebra] WITH NOCHECK ADD
 GO
 
 
+/*
+	Table: 'bp_hottopics'
+*/
+CREATE TABLE [bp_hottopics] (
+	[slot_id] [int] DEFAULT (0) NOT NULL ,
+	[topic_id] [int] DEFAULT (0) NOT NULL ,
+	[forum_id] [int] DEFAULT (0) NOT NULL ,
+	[image_id] [int] DEFAULT (0) NOT NULL ,
+	[last_update] [int] DEFAULT (0) NOT NULL 
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [bp_hottopics] WITH NOCHECK ADD 
+	CONSTRAINT [PK_bp_hottopics] PRIMARY KEY  CLUSTERED 
+	(
+		[slot_id]
+	)  ON [PRIMARY] 
+GO
+
+

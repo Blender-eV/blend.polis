@@ -1469,3 +1469,15 @@ CREATE TABLE phpbb_zebra (
 ALTER TABLE phpbb_zebra ADD PRIMARY KEY (user_id, zebra_id);;
 
 
+# Table: 'bp_hottopics'
+CREATE TABLE bp_hottopics (
+	slot_id INTEGER DEFAULT 0 NOT NULL,
+	topic_id INTEGER DEFAULT 0 NOT NULL,
+	forum_id INTEGER DEFAULT 0 NOT NULL,
+	image_id INTEGER DEFAULT 0 NOT NULL,
+	last_update INTEGER DEFAULT 0 NOT NULL
+);;
+
+ALTER TABLE bp_hottopics ADD PRIMARY KEY (slot_id);;
+
+

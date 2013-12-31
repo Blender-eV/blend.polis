@@ -1922,3 +1922,17 @@ CREATE TABLE phpbb_zebra (
 /
 
 
+/*
+	Table: 'bp_hottopics'
+*/
+CREATE TABLE bp_hottopics (
+	slot_id number(3) DEFAULT '0' NOT NULL,
+	topic_id number(8) DEFAULT '0' NOT NULL,
+	forum_id number(8) DEFAULT '0' NOT NULL,
+	image_id number(8) DEFAULT '0' NOT NULL,
+	last_update number(11) DEFAULT '0' NOT NULL,
+	CONSTRAINT pk_bp_hottopics PRIMARY KEY (slot_id)
+)
+/
+
+

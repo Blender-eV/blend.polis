@@ -1,0 +1,35 @@
+<!-- INCLUDE mcp_header.html -->
+
+<form id="hottopics" action="{U_ACTION}" method="post">
+<pre>{DEBUG}</pre>
+<h2>Bitte die Vorschau-Funktion benutzen und Thementitel/Bild kontrollieren!</h2>
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<div class="content">
+		<fieldset>
+		<dl>
+			<dt><label for="hot_topicid">Themen-ID:</label><br/>Wenn die ID stimmt, wird der Thementitel rechts angezeigt. Die Themen-ID steht in der URL als t=(ID)</dt>
+			<dd><input type="text" name="hot_topicid" id="hot_topicid" value="{TOPIC_ID}" class="inputbox" /></dd>
+			<dd><a href="{U_TOPIC}">{TOPIC_TITLE}</a></dd>
+		</dl>
+		<dl>
+			<dt><label for="hot_imageid">Bild-ID:</label><br/>Hier die URL des Bilds reinkopieren, die ID wird automatisch ausgelesen. Wenn die ID stimmt, wird das Bild angezeigt (Vorschau klicken).<br/>Die Grafik muss 160x100 Pixel groß sein.</dt>
+			<dd><input type="text" name="hot_imageid" id="hot_imageid" value="{IMAGE_ID}" class="inputbox" /></dd>
+			<dd><img src="{U_IMAGE}" /></dd>
+		</dl>
+		</fieldset>
+		<fieldset class="submit-buttons">
+			{S_HIDDEN_FIELDS}
+			<input type="submit" name="preview" value="{L_PREVIEW}" class="button1" />&nbsp;
+			<input type="submit" name="confirm" value="{L_SUBMIT}" class="button2" />&nbsp;
+			{S_FORM_TOKEN}
+		</fieldset>
+
+	</div>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+</form>
+
+<!-- INCLUDE mcp_footer.html -->

@@ -999,5 +999,16 @@ CREATE TABLE phpbb_zebra (
 );
 
 
+# Table: 'bp_hottopics'
+CREATE TABLE bp_hottopics (
+	slot_id tinyint(3) NOT NULL DEFAULT '0',
+	topic_id INTEGER UNSIGNED NOT NULL DEFAULT '0',
+	forum_id INTEGER UNSIGNED NOT NULL DEFAULT '0',
+	image_id INTEGER UNSIGNED NOT NULL DEFAULT '0',
+	last_update INTEGER UNSIGNED NOT NULL DEFAULT '0',
+	PRIMARY KEY (slot_id)
+);
+
+
 
 COMMIT;

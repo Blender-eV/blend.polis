@@ -113,6 +113,21 @@ if ($config['load_birthdays'] && $config['allow_birthdays'] && $auth->acl_gets('
 	$db->sql_freeresult($result);
 }
 
+// Hot Topics
+$sql = 'SELECT h.topic_id, h.forum_id, h.image_id, t.topic_title FROM bp_hottopics h LEFT JOIN ' . TOPICS_TABLE . ' t ON h.topic_id = t.topic_id ORDER BY h.slot_id ASC';
+$result = $db->sql_query($sql);
+
+while ($row = $db->sql_fetchrow($result))
+{
+	$template->assign_block_vars('slot', array(
+		'TOPIC_TITLE' => htmlspecialchars($row['topic_title']),
+		'U_TOPIC' => append_sid("{$phpbb_root_path}viewtopic.$phpEx", 'f=' . $row['forum_id'] . '&amp;t=' . $row['topic_id']),
+		'U_IMAGE' => append_sid("{$phpbb_root_path}download/file.$phpEx", 'id=' . $row['image_id']),
+	));
+}
+
+$db->sql_freeresult($result);
+
 // Assign index specific vars
 $template->assign_vars(array(
 	'TOTAL_POSTS'	=> sprintf($user->lang[$l_total_post_s], $total_posts),
