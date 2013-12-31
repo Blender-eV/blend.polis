@@ -186,6 +186,8 @@ $lang = array_merge($lang, array(
 	'SMILIES_LIMIT_EXPLAIN'			=> 'Die maximale Anzahl an Smilies in einem Beitrag. Um keine Begrenzung festzulegen, stelle als Wert 0 ein.',
 	'SMILIES_PER_PAGE'				=> 'Smilies pro Seite',
 	'TOPICS_PER_PAGE'				=> 'Themen pro Seite',
+	'SOLVED_IMG'					=> 'Gelöst-Bild',
+	'SOLVED_IMG_EXPLAIN'			=> 'Bild das in der Themenübersicht vor gelösten Themen angezeigt wird.',
 ));
 
 // Signature Settings

@@ -1642,6 +1642,7 @@ CREATE TABLE phpbb_topics (
 	topic_moved_id number(8) DEFAULT '0' NOT NULL,
 	topic_bumped number(1) DEFAULT '0' NOT NULL,
 	topic_bumper number(8) DEFAULT '0' NOT NULL,
+	topic_solved number(1) DEFAULT '0' NOT NULL,
 	poll_title varchar2(765) DEFAULT '' ,
 	poll_start number(11) DEFAULT '0' NOT NULL,
 	poll_length number(11) DEFAULT '0' NOT NULL,

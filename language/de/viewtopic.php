@@ -104,6 +104,9 @@ $lang = array_merge($lang, array(
 
 	'UNLOCK_TOPIC'			=> 'Thema entsperren',
 
+	'TOPIC_SOLVED_SET'	=> 'Thema als gelöst markieren',
+	'TOPIC_SOLVED_UNSET'	=> 'Thema als ungelöst markieren',
+
 	'VIEW_INFO'				=> 'Beitrags-Details',
 	'VIEW_NEXT_TOPIC'		=> 'Nächstes Thema',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Vorheriges Thema',
