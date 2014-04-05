@@ -584,8 +584,11 @@ div.rules {
 	color: #bcbcbc;
 	padding: 0 10px;
 	margin: 10px 0;
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
+
+div.rules a { font-weight: bold; }
+div.rules a:visited { color: #E01000; }
 
 div.rules ul {
 	margin-left: 20px;

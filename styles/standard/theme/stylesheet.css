@@ -3518,7 +3518,10 @@ input.disabled {
  */
 ul#headerimg li{display:block;float:left;width:160px;height:100px}
 
-
+/* Fix für Scrollbar-Problem an Attachements #jh */
+#cboxLoadedContent {
+	overflow: hidden !important;
+}
 
 
 

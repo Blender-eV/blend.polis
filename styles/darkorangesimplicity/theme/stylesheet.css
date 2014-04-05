@@ -111,12 +111,14 @@ p.right {
 /* Main blocks
 ---------------------------------------- */
 #wrap {
-	margin:0 auto;
+	margin: 8px auto 8px auto;
+	padding: 4px 0px;
 	width:960px;
 	background-color: #232323;
-	background-image: url("{T_THEME_PATH}/images/Forum_bg.png");
+/*	background-image: url("{T_THEME_PATH}/images/Forum_bg.png"); */
 	background-repeat: no-repeat;
 	background-position: center top;
+	border: 4px solid #1a1a1a;
 }
 @media only screen and (max-device-width: 600px) {#wrap {background-image:none; width:100% !important;} }
 
@@ -131,6 +133,7 @@ p.right {
 
 #page-footer {
 	clear: both;
+	margin-bottom: 0px;
 }
 
 #page-footer h3 {
@@ -205,10 +208,10 @@ a#logo:hover {
 }
 
 .navbar {
-	padding: 6px 10px;
+	padding: 56px 10px 6px 10px;
 	background-image: url("{T_THEME_PATH}/images/Forum_logo.png");
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center 0px;
 }
 @media only screen and (max-device-width: 800px) {.navbar {background-image: none;} }
 
@@ -571,6 +574,7 @@ li.pagination {
 	padding: 5px;
 	text-align: center;
 	color: #555555;
+	border-top: 4px solid #1a1a1a;
 }
 
 .small {
@@ -951,6 +955,7 @@ li.header dd {
 
 li.header dl.icon {
 	min-height: 0;
+	margin-top: 6px;
 }
 
 li.header dl.icon dt {
@@ -1187,6 +1192,7 @@ dl.faq dt {
 
 .content li {
 	list-style-type: inherit;
+	padding-bottom: 0.5em; /* #jh Abstand zwischen Aufzählungspunkten */
 }
 
 .content ul, .content ol {
@@ -1644,9 +1650,19 @@ a.print {
 	width: 22px;
 }
 
+a.print:hover {
+	background-position: 0 -20px;
+	text-decoration: none;
+}
+
 a.sendemail {
 	background-image: none;
 	width: 22px;
+}
+
+a.sendemail:hover {
+	background-position: 0 -18px;
+	text-decoration: none;
 }
 
 a.fontsize {
@@ -1667,7 +1683,7 @@ a.fontsize:hover {
 	background-position: 0 50%;
 	background-repeat: no-repeat;
 	background-image: none;
-	padding: 1px 0 0 17px;
+	padding: 0 0 0 17px; /* was 1px 0 0 17px;, breaks Search-Text-height #jh */
 }
 
 /* Poster profile icons
@@ -2605,6 +2621,7 @@ Colours and backgrounds for common.css
 html, body {
 	color: #999;
 	background-color: #111;
+	border-top: 1px solid #f5430b;
 }
 
 h1 {
@@ -2795,6 +2812,9 @@ dl.details dd {
 
 .copyright {
 	color: #555555;
+	background-color: #111;
+	margin: 8px -4px -8px -4px;
+	padding-bottom: 12px !important;
 }
 
 .error {
@@ -3211,11 +3231,11 @@ Colours and backgrounds for buttons.css
 .forwardpm-icon span	{ background-image: url("{IMG_BUTTON_PM_FORWARD_SRC}") ;}
 
 a.print {
-	background-image: url("{T_THEME_PATH}/images/icon_print.gif");
+	background-image: url("{T_THEME_PATH}/images/icon_print_b.png");
 }
 
 a.sendemail {
-	background-image: url("{T_THEME_PATH}/images/icon_sendemail.gif");
+	background-image: url("{T_THEME_PATH}/images/icon_sendemail_b.png");
 }
 
 a.fontsize {
@@ -3224,19 +3244,19 @@ a.fontsize {
 
 /* Icon images
 ---------------------------------------- */
-.sitehome						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-faq						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-members					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-home						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-ucp						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-register					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-logout					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-bookmark					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-bump						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-subscribe					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-unsubscribe				{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-pages						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
-.icon-search					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); }
+.sitehome						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-faq						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-members					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-home						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-ucp						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-register					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-logout					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-bookmark					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-bump						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-subscribe					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-unsubscribe				{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-pages						{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
+.icon-search					{ background-image: url("{T_THEME_PATH}/images/icon_bigsquare.png"); background-position: 0px 5px; }
 
 /* Profile & navigation icons */
 .email-icon, .email-icon a		{ background-image: url("{IMG_ICON_CONTACT_EMAIL_SRC}"); }
@@ -3539,7 +3559,7 @@ ul#headerimg li{
 	float:left;
 	width:160px;
 	height:100px;
-
+	margin-bottom: 4px; /* was 0, helps to separate forum groups #jh */
 }
 @media only screen and (max-device-width: 600px) {ul#headerimg li {display:none !important;} }
 
@@ -3549,11 +3569,10 @@ ul#headerimg li{
 }
 @media only screen and (max-device-width: 600px) {#headerimg {display:none !important;} }
 
-
-
-
-
-
+/* Fix für Scrollbar-Problem an Attachements #jh */
+#cboxLoadedContent {
+	overflow: hidden !important;
+}
 
 table.table1 {
 	width: 99%;		/* IE < 6 browsers */
@@ -3562,7 +3581,5 @@ table.table1 {
 	voice-family: inherit;
 	width: 100%;
 }
-
-
 
 html>body table.table1 { width: 100%; }	/* Reset 100% for opera */
