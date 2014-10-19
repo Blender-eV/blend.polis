@@ -3901,4 +3901,10 @@ li.row dl.icon:hover, li.row:hover dl.icon {
 
 }
 
+
+/* limit effective height of signature to three lines per Rules */
+.signature {
+	max-height: 4.5em;
+}
+
 html>body table.table1 { width: 100%; }	/* Reset 100% for opera */

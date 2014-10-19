@@ -3527,6 +3527,10 @@ ul#headerimg li{display:block;float:left;width:160px;height:100px}
 
 
 
+/* limit effective height of signature to three lines per Rules */
+.signature {
+	max-height: 4.5em;
+}
 
 table.table1 {
 	width: 99%;		/* IE < 6 browsers */

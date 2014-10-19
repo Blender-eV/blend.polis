@@ -3801,6 +3801,11 @@ ul.navlinks {
 	-o-filter: opacity(1);
 }
 
+/* limit effective height of signature to three lines per Rules */
+.signature {
+	max-height: 4.5em;
+}
+
 /* #jh transitions */
 a, a img, .featured-post .byline, li.row {
 	-webkit-transition: all 0.16s ease-out;
