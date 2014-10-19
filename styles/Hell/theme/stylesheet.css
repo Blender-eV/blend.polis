@@ -34,7 +34,7 @@ body {
 	font-size: 10px; /* wird in der normal.css geregelt, hier drin damit der text gleich die richtige größe hat */
 	margin: 0;
 	padding: 0;
-	background-image: url("{T_THEME_PATH}/images/Backgroundpattern.png");
+	/* background-image: url("{T_THEME_PATH}/images/Backgroundpattern.png"); */
 	background-position: center bottom;
 }
 @media only screen and (max-device-width: 600px) {body {padding:0;width:100%;font-size:18px !important;} }
@@ -51,8 +51,10 @@ h1 {
 h2 {
 	/* Forum header titles */
 	font-weight: normal;
-	font-size: 2em;
+	font-size: 2.4em;
+	line-height: 2em;
 	margin: 0.8em 0 0.2em 0;
+	font-family: 'titilliumsemibold', sans-serif;
 }
 @media only screen and (max-device-width: 800px) {h2 {font-size: 2em; margin: 0.5em 0 0.2em 0;} }
 
@@ -69,9 +71,9 @@ h3 {
 	padding-bottom: 5px; /* was 2px #jh */
 	font-size: 1.05em;
 	margin-top: 12px;
-	background-image: url("{T_THEME_PATH}/images/h3.bg.png");
+/*	background-image: url("{T_THEME_PATH}/images/h3.bg.png");
 	background-repeat: no-repeat;
-	background-position: left bottom;
+	background-position: left bottom; */
 }
 
 h4 {
@@ -116,15 +118,15 @@ p.right {
 /* Main blocks
 ---------------------------------------- */
 #wrap {
-	margin: 8px auto 8px auto;
-	padding: 4px 0px;
-	width:960px;
-	background-color: #1d2121;
+	margin: 0;
+	padding: 0;
+	width:100%
+	background-color: #eee;
+	border-top: 2px solid #000;
 /* former header graphic position
 	background-image: url("{T_THEME_PATH}/images/Web.png");
 	background-repeat: no-repeat;
 	background-position: center 16px; */
-	border: 4px solid #171a1a;
 }
 @media only screen and (max-device-width: 600px) {#wrap {background-image:none; width:100% !important;} }
 
@@ -140,7 +142,11 @@ p.right {
 #page-footer {
 	clear: both;
 	margin-bottom: 0px;
+	background: #333;
 }
+
+#page-footer a:link, #page-footer a:visited {	color: #fff; }
+#page-footer p { color: #bbb; }
 
 #page-footer h3 {
 	margin-top: 12px;
@@ -214,20 +220,30 @@ a#logo:hover {
 }
 
 .navbar {
-	padding: 4px 10px 10px 10px;
-	background-image: url("{T_THEME_PATH}/images/header_graphic.png");
-	background-repeat: no-repeat;
-	background-position: center 8px;
+	padding: 0;
+	background-color: #cc3f04; /* weakened ff3e00 */
+/*	font-weight: bold; */
+	font-size: 1.2em;
+	font-family: 'titilliumsemibold', sans-serif;
 }
 @media only screen and (max-device-width: 800px) {.navbar {background-image: none;} }
+
+.navbar .inner {
+	padding: 0;
+}
 
 /* #page-header .navbar .inner {
 	background-image: url("{T_THEME_PATH}/images/navlinks.bg.png");
 } */
 
 #page-footer .navbar {
-	padding: 0 10px;
-	background-image: none;
+	padding: 0 10px 5px 10px;
+	background: #cc3f04; /* weakened ff3e00 */
+	font-weight: bold;
+}
+
+.navbar a:link, .navbar a:visited {
+	color: #fff
 }
 
 .forabg {
@@ -235,6 +251,9 @@ a#logo:hover {
 	margin-bottom: 4px;
 	padding: 0 2px;
 	clear: both;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .forumbg {
@@ -347,8 +366,13 @@ ul.navlinks {
 /*	padding-bottom: 72px; */
 	margin-bottom: 1px;
 /*	border-bottom: 1px solid #ff3e00; */
+	padding: 5px 10px;
 	font-weight: bold;
 	height: 80px;
+	background: #333;
+	background-image: url("{T_THEME_PATH}/images/header_graphic.png");
+	background-repeat: no-repeat;
+	background-position: center 8px;
 }
 
 ul.leftside {
@@ -585,8 +609,6 @@ li.pagination {
 .copyright {
 	padding: 5px;
 	text-align: center;
-	color: #555555;
-	border-top: 4px solid #171a1a;
 }
 
 .small {
@@ -695,10 +717,11 @@ a:active	{ text-decoration: none; }
 
 /* Links for forum/topic lists */
 a.forumtitle {
-	font-size: 1.2em;
-	font-weight: bold;
+	font-size: 1.4em;
+/*	font-weight: bold; */
 	color: #898989;
 	text-decoration: none;
+	font-family: 'titilliumsemibold', sans-serif;
 }
 
 /* a.forumtitle:visited { color: #898989; } */
@@ -712,10 +735,11 @@ a.forumtitle:active {
 }
 
 a.topictitle {
-	font-size: 1.2em;
-	font-weight: bold;
+	font-size: 1.4em;
+/*	font-weight: bold; */
 	color: #898989;
 	text-decoration: none;
+	font-family: 'titilliumsemibold', sans-serif;
 }
 
 /* a.topictitle:visited { color: #d2d2d2; } */
@@ -865,8 +889,10 @@ ul.topiclist {
 }
 
 li.header {
-	background-image: url("{T_THEME_PATH}/images/li.header.bg.png"); /* base-color: 00c4ff #jh */
-	background-repeat: no-repeat; /* #jh preventing it from spilling into next line */
+/* 	background-image: url("{T_THEME_PATH}/images/li.header.bg.png"); /* base-color: 00c4ff #jh */
+/* 	background-repeat: no-repeat; #jh preventing it from spilling into next line */
+	background-color: #333;
+	color: #ddd;
 }
 
 ul.topics {
@@ -875,16 +901,17 @@ ul.topics {
 }
 
 ul.forums {
-	background: none repeat-x 0 0;
-/*	border-top: 1px solid;
-	border-color: #ff3e00; #jh no border on top */
+/*	background: #222;*/
+	border-top: 3px solid #ff3e00;
+	padding: 6px 0 0 0;
+	margin: 0 0 8px 0;
 }
 
 ul.topiclist li {
 	display: block;
 	list-style-type: none;
-	margin: -1px -1px -2px -1px;
-	padding: 1px 2px 4px 1px;
+	margin: -1px -2px -2px -2px;
+	padding: 2px 2px 6px 1px;
 }
 
 ul.topiclist dl {
@@ -893,17 +920,12 @@ ul.topiclist dl {
 
 ul.topiclist li.row dl {
 /*	padding: 2px 0; */
-	transform: scaleY(-1);
-	-webkit-transform: scaleY(-1);
-	-o-transform: scaleY(-1);
-	-ms-transform: scaleY(-1);
-	-moz-transform: scaleY(-1);
 }
 
 ul.topiclist dt {
 	display: block;
 	float: left;
-	width: 50%;
+	width: 55%;
 	font-size: 1em;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -955,31 +977,36 @@ li.row:hover dd {
 /*	border-left-color: #CCCCCC; */
 }
 
+li.header {
+	text-transform: uppercase;
+	font-family: 'titilliumsemibold_upright', sans-serif;
+	font-size: 1.2em;
+}
+
 li.header dt, li.header dd {
 	line-height: 1em;
 	border-left-width: 0;
 	margin: 2px 0 4px 0;
-	color: #FFFFFF;
 	padding-top: 2px;
 	padding-bottom: 2px;
-	font-size: 1em;
-	text-transform: uppercase;
+	font-size: 1.2em;
 }
 @media only screen and (max-device-width: 800px) {li.header dt, li.header dd {margin: 0;} }
 
 li.header dt {
-	font-weight: bold;
-	font-size: 1.3em;
+/*	font-weight: bold; */
+	font-size: 1.4em;
+	font-family: 'titilliumbold_upright', sans-serif;
 }
 
 li.header dd {
 /*	margin-left: 1px; */
-	padding: 5px 0 0 2px;
+	padding: 5px 0 0 0;
 }
 
 li.header dl.icon {
 	min-height: 0;
-	margin-top: 6px;
+	margin: 8px 16px 4px 8px;
 }
 
 li.header dl.icon dt {
@@ -989,8 +1016,7 @@ li.header dl.icon dt {
 }
 .forabg li.header dl.icon dt {
 	/* Tweak for headers alignment when folder icon used */
-	padding-left: 0;
-	padding-right: 54px;
+	padding: 4px 62px 0 2px;
 }
 
 /* Forum list column styles */
@@ -1023,7 +1049,7 @@ dd.posts, dd.topics, dd.views {
 @media only screen and (max-device-width: 600px) {dd.posts, dd.topics, dd.views {display:none !important;} }
 
 dd.lastpost {
-	width: 25%;
+	width: 20%;
 }
 @media only screen and (max-device-width: 600px) {dd.lastpost {/*display:none !important;*/font-size: 0.8em !important;} }
 
@@ -1279,9 +1305,6 @@ p.author {
 	line-height: 140%;
 	overflow: hidden;
 	width: 100%;
-	background-image: url("{T_THEME_PATH}/images/sigseparate.bg.png");
-	background-repeat: no-repeat;
-	background-position: left top;
 	-webkit-filter: grayscale(100%) brightness(0.8) contrast(0.8);
 	filter: grayscale(100%) brightness(0.8) contrast(0.8);
 	-o-filter: grayscale(100%) brightness(0.8) contrast(0.8);
@@ -2738,22 +2761,23 @@ Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 
 html, body {
-	color: #999;
-	background-color: #101111;
-	border-top: 1px solid #f5430b;
+	color: #222;
+	background-color: #eee;
 }
 
 h1 {
-	color: #FFFFFF;
+	color: #111;
 }
 
 h2 {
-	color: #ddd;
+	color: #111;
 }
 
 h3 {
 /*	border-bottom-color: #333; #jh */
-	color: #eee;
+	color: #181818;
+	font-size: 1.2em;
+	font-family: 'titilliumsemibold_upright', sans-serif;
 }
 
 hr {
@@ -2769,7 +2793,7 @@ hr.dashed {
 --------------------------------------------- */
 
 #search-box {
-	color: #FFFFFF;
+	color: #222;
 }
 
 #search-box #keywords {
@@ -2926,20 +2950,18 @@ dl.details dd {
 ---------------------------------------- */
 
 .copyright {
-	color: #555555;
-	background-color: #111;
-	background-image: url("{T_THEME_PATH}/images/Backgroundpattern.png");
+	color: #777;
+	/* background-image: url("{T_THEME_PATH}/images/Backgroundpattern.png"); */
 	background-position: center bottom;
 	margin: 8px -4px -8px -4px;
 	padding-bottom: 12px !important;
 }
 
 .copyright a:link {
-	color: #828585 !important;
-	background-color: #101111;
+	color: #666 !important;
 }
 .copyright a:hover {
-	color: #ecf0f1 !important;
+	color: #222526 !important;
 }
 
 .error {
@@ -2954,7 +2976,7 @@ li.reported:hover {
 	/*background-color: #431414 !important;*/
 }
 .sticky {
-	background-color: #232929;
+	background-color: #fff;
 }
 
 .announce {
@@ -2963,11 +2985,11 @@ li.reported:hover {
 
 div.rules {
 	background-color: transparent;
-	color: #f5430b;
+	color: #0e0e0e;
 }
 
 p.rules {
-	background-color: #000;
+	background-color: #fff;
 	background-image: none;
 }
 
@@ -2976,18 +2998,18 @@ p.rules {
 Colours and backgrounds for links.css
 -------------------------------------------------------------- */
 
-a:link	{ color: #f0f0f0; }
-a:visited	{ color: #f0f0f0; }
+a:link	{ color: #0f0f0f; }
+a:visited	{ color: #0f0f0f; }
 a:hover	{ color: #ef3a00; }
-a:active	{ color: #ffddd3; }
+a:active	{ color: #001311; }
 
 /* Links on gradient backgrounds */
 #search-box a:link, .navbg a:link, .forumbg .header a:link, .forabg .header a:link, th a:link {
-	color: #FFFFFF;
+	color: #eee;
 }
 
 #search-box a:visited, .navbg a:visited, .forumbg .header a:visited, .forabg .header a:visited, th a:visited {
-	color: #FFFFFF;
+	color: #eee;
 }
 
 #search-box a:hover, .navbg a:hover, .forumbg .header a:hover, .forabg .header a:hover, th a:hover {
@@ -2995,12 +3017,12 @@ a:active	{ color: #ffddd3; }
 }
 
 #search-box a:active, .navbg a:active, .forumbg .header a:active, .forabg .header a:active, th a:active {
-	color: #C8E6FF;
+	color: #fff;
 }
 
 /* Links for forum/topic lists */
 a.forumtitle {
-	color: #ddd;
+	color: #222;
 }
 
 /* a.forumtitle:visited { color: #f0f0f0; } */
@@ -3010,11 +3032,11 @@ a.forumtitle:hover {
 }
 
 a.forumtitle:active {
-	color: #f0f0f0;
+	color: #0f0f0f;
 }
 
 a.topictitle {
-	color: #ddd;
+	color: #222;
 }
 
 /* a.topictitle:visited { color: #368AD2; } */
@@ -3024,7 +3046,7 @@ a.topictitle:hover {
 }
 
 a.topictitle:active {
-	color: #f0f0f0;
+	color: #0f0f0f;
 }
 
 /* Post body links */
@@ -3040,7 +3062,7 @@ a.topictitle:active {
 }
 
 .postlink:active {
-	color: #ffddd3;
+	color: #001311;
 }
 
 .postlink:hover {
@@ -3065,7 +3087,7 @@ a.topictitle:active {
 
 /* Profile links */
 .postprofile a:link, .postprofile a:active, .postprofile a:visited, .postprofile dt.author a {
-	color: #f0f0f0;
+	color: #0f0f0f;
 }
 
 .postprofile a:hover, .postprofile dt.author a:hover {
@@ -3074,7 +3096,7 @@ a.topictitle:active {
 
 /* Profile searchresults */
 .search .postprofile a {
-	color: #f0f0f0;
+	color: #0f0f0f;
 }
 
 .search .postprofile a:hover {
@@ -3119,9 +3141,10 @@ ul.forums {
 	background-image: url("{T_THEME_PATH}/images/gradient.gif"); */
 }
 
-ul.topiclist li {
-	color: #aaa;
-/*	background-color: #1d2121 */
+ul.topiclist li.row {
+	color: #666;
+	background: #e3e3e3;
+	border-bottom: 2px solid #ddd;
 }
 
 ul.topiclist dd {
@@ -3145,24 +3168,19 @@ li.row {
 	border-top-color:  #000;
 	border-bottom-color: #00151f;
 /*	background-color: #1d2121; #jh */
-	background-image: url("{T_THEME_PATH}/images/li.forum.bg.png");
+/*	background-image: url("{T_THEME_PATH}/images/li.forum.bg.png"); */
 	background-repeat: no-repeat;
 	padding-top: 5px !important;
 	margin-bottom: -1px;
-	transform: scaleY(-1);
-	-webkit-transform: scaleY(-1);
-	-o-transform: scaleY(-1);
-	-ms-transform: scaleY(-1);
-	-moz-transform: scaleY(-1);
 }
 
 li.row strong {
-	color: #fff;
+	color: #000;
 }
 
 li.row:hover {
 	background-color: transparent;
-	background-image: url("{T_THEME_PATH}/images/li.forum.highlight.bg.png");
+/*	background-image: url("{T_THEME_PATH}/images/li.forum.highlight.bg.png"); */
 }
 
 li.row:hover dd {
@@ -3175,7 +3193,7 @@ li.row:hover dd {
 }
 
 li.header dt, li.header dd {
-	color: #FFFFFF;
+	color: #eee;
 }
 
 /* Forum list column styles */
@@ -3186,13 +3204,13 @@ ul.topiclist dd.searchextra {
 /* Post body styles
 ----------------------------------------*/
 .postbody {
-	color: #ddd;
+	color: #222;
 }
 
 /* Content container styles
 ----------------------------------------*/
 .content {
-	color: #ddd;
+	color: #222;
 }
 
 .content h2, .panel h2 {
@@ -3201,7 +3219,7 @@ ul.topiclist dd.searchextra {
 }
 
 dl.faq dt {
-	color: #fff;
+	color: #000;
 }
 
 .posthilit {
@@ -3725,8 +3743,10 @@ ul#headerimg li{
 @media only screen and (max-device-width: 600px) {ul#headerimg li {display:none !important;} }
 
 #headerimg {
-	margin-left: -10px;
+	margin-left: auto;
+	margin-right: auto;
 	width: 960px;
+	height: 100px;
 }
 @media only screen and (max-device-width: 600px) {#headerimg {display:none !important;} }
 
@@ -3846,5 +3866,39 @@ li.row dl.icon:hover, li.row:hover dl.icon {
 	-o-transition: all 0s;
 }
 
+@font-face {
+    font-family: 'titilliumsemibold_upright';
+    src: url('{T_THEME_PATH}/fonts/titillium-semiboldupright-webfont.eot');
+    src: url('{T_THEME_PATH}/fonts/titillium-semiboldupright-webfont.eot?#iefix') format('embedded-opentype'),
+         url('{T_THEME_PATH}/fonts/titillium-semiboldupright-webfont.woff') format('woff'),
+         url('{T_THEME_PATH}/fonts/titillium-semiboldupright-webfont.ttf') format('truetype'),
+         url('{T_THEME_PATH}/fonts/titillium-semiboldupright-webfont.svg#titilliumsemibold_upright') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'titilliumbold_upright';
+    src: url('{T_THEME_PATH}/fonts/titillium-boldupright-webfont.eot');
+    src: url('{T_THEME_PATH}/fonts/titillium-boldupright-webfont.eot?#iefix') format('embedded-opentype'),
+         url('{T_THEME_PATH}/fonts/titillium-boldupright-webfont.woff') format('woff'),
+         url('{T_THEME_PATH}/fonts/titillium-boldupright-webfont.ttf') format('truetype'),
+         url('{T_THEME_PATH}/fonts/titillium-boldupright-webfont.svg#titilliumbold_upright') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'titilliumsemibold';
+    src: url('{T_THEME_PATH}/fonts/titillium-semibold-webfont.eot');
+    src: url('{T_THEME_PATH}/fonts/titillium-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('{T_THEME_PATH}/fonts/titillium-semibold-webfont.woff') format('woff'),
+         url('{T_THEME_PATH}/fonts/titillium-semibold-webfont.ttf') format('truetype'),
+         url('{T_THEME_PATH}/fonts/titillium-semibold-webfont.svg#titilliumbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html>body table.table1 { width: 100%; }	/* Reset 100% for opera */
