@@ -584,8 +584,11 @@ div.rules {
 	color: #bcbcbc;
 	padding: 0 10px;
 	margin: 10px 0;
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
+
+div.rules a { font-weight: bold; }
+div.rules a:visited { color: #E01000; }
 
 div.rules ul {
 	margin-left: 20px;
@@ -2870,7 +2873,7 @@ a.topictitle:active {
 
 /* Profile links */
 .postprofile a:link, .postprofile a:active, .postprofile a:visited, .postprofile dt.author a {
-	color: #105289;
+	color: #CADCEB;
 }
 
 .postprofile a:hover, .postprofile dt.author a:hover {
@@ -3501,6 +3504,11 @@ table.table1 {
 	width: 100%;
 }
 html>body table.table1 { width: 100%; }	/* Reset 100% for opera */
+
+/* limit effective height of signature to three lines per Rules */
+.signature {
+	max-height: 4.5em;
+}
 
 ul#headerimg li {
 	display: block;
