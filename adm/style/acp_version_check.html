@@ -1,0 +1,41 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+<h1>{L_VERSION_CHECK}</h1>
+<p>{L_VERSION_CHECK_EXPLAIN}</p>
+
+<!-- BEGIN mods -->
+	<div class="<!-- IF mods.S_UP_TO_DATE -->successbox<!-- ELSE -->errorbox<!-- ENDIF -->">
+		<p>{mods.UP_TO_DATE}</p>
+	</div>
+
+	<fieldset>
+		<legend>{mods.TITLE}</legend>
+		<dl>
+			<dt><label>{L_AUTHOR}</label></dt>
+			<dd><strong><a href="{mods.U_AUTHOR}">{mods.AUTHOR}</a></strong></dd>
+		</dl>
+		<dl>
+			<dt><label>{L_CURRENT_VERSION}</label></dt>
+			<dd><strong>{mods.CURRENT_VERSION}</strong></dd>
+		</dl>
+		<dl>
+			<dt><label>{L_LATEST_VERSION}</label></dt>
+			<dd><strong>{mods.LATEST_VERSION}</strong></dd>
+		</dl>
+		<!-- IF not mods.S_UP_TO_DATE -->
+			<dl>
+				<dt><label>{L_DOWNLOAD_LATEST}</label></dt>
+				<dd><strong><a href="{mods.DOWNLOAD}">{L_DOWNLOAD} {mods.TITLE} {mods.LATEST_VERSION}</a></strong></dd>
+			</dl>
+			<dl>
+				<dt><label>{L_ANNOUNCEMENT_TOPIC}</label></dt>
+				<dd><strong><a href="{mods.ANNOUNCEMENT}">{L_RELEASE_ANNOUNCEMENT}</a></strong></dd>
+			</dl>
+		<!-- ENDIF -->
+	</fieldset>
+<!-- END mods -->
+
+<div style="text-align: center;">MOD Version Check &copy; 2007 <a href="http://startrekguide.com">Handyman</a></div>
+<!-- INCLUDE overall_footer.html -->
