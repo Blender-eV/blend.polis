@@ -3,8 +3,8 @@
 	Style name:		proSilver
 	Based on style:	proSilver (this is the default phpBB 3 style)
 	Original author:	subBlue ( http://www.subBlue.com/ )
-	Modified by:
-
+	Modified by:		
+	
 	Copyright 2006 phpBB Group ( http://www.phpbb.com/ )
     --------------------------------------------------------------
 */
@@ -189,8 +189,8 @@ a#logo:hover {
 /* Round cornered boxes and backgrounds
 ---------------------------------------- */
 .headerbar {
-	background: #141414 none repeat-x 0 0;
-	color: #000;
+	background: #ebebeb none repeat-x 0 0;
+	color: #FFFFFF;
 	margin-bottom: 4px;
 	padding: 0 5px;
 }
@@ -216,8 +216,8 @@ a#logo:hover {
 .panel {
 	margin-bottom: 4px;
 	padding: 0 10px;
-	background-color: #232323;
-	color: #CCC;
+	background-color: #ECF1F3;
+	color: #28313F;
 }
 
 .post {
@@ -414,7 +414,7 @@ table.info tbody th {
 
 /* Misc layout styles
 ---------------------------------------- */
-/* column[1-2] styles are containers for two column layouts
+/* column[1-2] styles are containers for two column layouts 
    Also see tweaks.css */
 .column1 {
 	float: left;
@@ -584,11 +584,8 @@ div.rules {
 	color: #bcbcbc;
 	padding: 0 10px;
 	margin: 10px 0;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
-
-div.rules a { font-weight: bold; }
-div.rules a:visited { color: #E01000; }
 
 div.rules ul {
 	margin-left: 20px;
@@ -738,16 +735,16 @@ a.topictitle:active {
 }
 
 
-/* Profile searchresults */
+/* Profile searchresults */	
 .search .postprofile a {
 	color: #898989;
-	text-decoration: none;
+	text-decoration: none; 
 	font-weight: normal;
 }
 
 .search .postprofile a:hover {
 	color: #d3d3d3;
-	text-decoration: underline;
+	text-decoration: underline; 
 }
 
 /* Back to top of page */
@@ -1186,7 +1183,7 @@ p.author {
 	margin-top: 1.5em;
 	padding-top: 0.2em;
 	font-size: 1.1em;
-	border-top: 1px solid #000;
+	border-top: 1px solid #FFF;
 	clear: left;
 	line-height: 140%;
 	overflow: hidden;
@@ -1230,13 +1227,12 @@ blockquote {
 	padding: 5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
-	border-radius:5px;
 }
 
 blockquote blockquote {
 	/* Nested quotes */
 	font-size: 1em;
-	margin: 0.5em 1px 0 15px;
+	margin: 0.5em 1px 0 15px;	
 }
 
 blockquote cite {
@@ -1258,19 +1254,15 @@ blockquote.uncited {
 
 /* Code block */
 dl.codebox {
-	padding: 3px 3px 3px 8px;
-	background-color: #333;
-	border: 1px solid #000;
+	padding: 3px;
+	background-color: #FFFFFF;
+	border: 1px solid #d8d8d8;
 	font-size: 1em;
-	color: #ccc;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:5px;
 }
 
 dl.codebox dt {
 	text-transform: uppercase;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #CCCCCC;
 	margin-bottom: 3px;
 	font-size: 0.8em;
 	font-weight: bold;
@@ -1291,7 +1283,7 @@ dl.codebox code {
 	padding-top: 5px;
 	font: 0.9em Monaco, "Andale Mono","Courier New", Courier, mono;
 	line-height: 1.3em;
-	color: #ccc;
+	color: #8b8b8b;
 	margin: 2px 0;
 }
 
@@ -1302,22 +1294,15 @@ dl.codebox code {
 .syntaxkeyword	{ color: #585858; }
 .syntaxstring	{ color: #a7a7a7; }
 
-kbd {
-	border: 0.2em solid;
-	border-color: #464646 #363636 #363636 #464646;
-	padding: 0 0.4em;
-	background: #555;
-}
-
 /* Attachments
 ----------------------------------------*/
 .attachbox {
 	float: left;
-	width: auto;
+	width: auto; 
 	margin: 5px 5px 5px 0;
 	padding: 6px;
-	background-color: #111;
-	border: 1px dashed #B4BAC0;
+	background-color: #FFFFFF;
+	border: 1px dashed #C9D2D8;
 	clear: left;
 }
 
@@ -1392,7 +1377,7 @@ dl.file dt {
 dl.file dd {
 	color: #666666;
 	margin: 0;
-	padding: 0;
+	padding: 0;	
 }
 
 dl.thumbnail img {
@@ -1425,13 +1410,15 @@ fieldset.polls {
 
 fieldset.polls dl {
 	margin-top: 5px;
-	border-top: 1px solid #DCDEE2;
+	border-top: 1px solid #e2e2e2;
 	padding: 5px 0 0 0;
 	line-height: 120%;
+	color: #666666;
 }
 
 fieldset.polls dl.voted {
 	font-weight: bold;
+	color: #000000;
 }
 
 fieldset.polls dt {
@@ -1507,11 +1494,11 @@ fieldset.polls dd div {
 	/* Also see tweaks.css */
 	margin: 5px 0 10px 0;
 	min-height: 80px;
-	border-right: 1px solid #000;
+	border-right: 1px solid #FFF;
 	width: 20%;
 	float: left;
 	display: inline;
-	color: #ccc;
+	color: #666;
 }
 
 .postprofile dd, .postprofile dt {
@@ -1914,7 +1901,7 @@ ul.cplist {
 	padding: 0 10px 4px 10px;
 	font-size: 1em;
 	font-weight: bold;
-	background-color: #272727;
+	background-color: #f2f2f2;
 	margin-left: 2px;
 }
 
@@ -1926,11 +1913,11 @@ ul.cplist {
 }
 
 #minitabs li.activetab {
-	background-color: #4d4d4d;
+	background-color: #F9F9F9;
 }
 
 #minitabs li.activetab a, #minitabs li.activetab a:hover {
-	color: #0096E1;
+	color: #333333;
 }
 
 /* UCP navigation menu
@@ -1989,6 +1976,10 @@ ul.cplist {
 #cp-main .panel {
 }
 
+#cp-main .pm {
+	background-color: #FFFFFF;
+}
+
 #cp-main span.corners-top, #cp-menu span.corners-top {
 	background-image: none;
 }
@@ -2024,7 +2015,7 @@ ul.cplist {
 
 /* Friends list */
 .cp-mini {
-	background-color: #232323;
+	background-color: #eef5f9;
 	padding: 0 5px;
 	margin: 10px 15px 10px 5px;
 }
@@ -2035,7 +2026,7 @@ ul.cplist {
 
 dl.mini dt {
 	font-weight: bold;
-	color: #D3D3D3;
+	color: #425067;
 }
 
 dl.mini dd {
@@ -2094,7 +2085,7 @@ ol.def-rules li {
 
 .pmlist li.pm_replied_colour, .pm_replied_colour {
 	border: solid 3px #c2c2c2;
-	border-width: 0 3px;
+	border-width: 0 3px;	
 }
 
 .pmlist li.pm_friend_colour, .pm_friend_colour {
@@ -2160,6 +2151,10 @@ option {
 	padding-right: 1em;
 }
 
+option.disabled-option {
+	color: graytext;
+}
+
 textarea {
 	width: 60%;
 	padding: 2px;
@@ -2187,7 +2182,7 @@ fieldset dl {
 }
 
 fieldset dt {
-	float: left;
+	float: left;	
 	width: 40%;
 	text-align: left;
 	display: block;
@@ -2488,7 +2483,7 @@ input.search {
 .tiny { width: 10%;}
 /* proSilver Style Sheet Tweaks
 
-These style definitions are mainly IE specific
+These style definitions are mainly IE specific 
 tweaks required due to its poor CSS support.
 -------------------------------------------------*/
 
@@ -2514,12 +2509,12 @@ html>body dd label input { vertical-align: text-bottom; }	/* Align checkboxes/ra
 * html .column1, * html .column2 { width: 45%; }
 
 /* Nice method for clearing floated blocks without having to insert any extra markup (like spacer above)
-   From http://www.positioniseverything.net/easyclearing.html
+   From http://www.positioniseverything.net/easyclearing.html 
 #tabs:after, #minitabs:after, .post:after, .navbar:after, fieldset dl:after, ul.topiclist dl:after, ul.linklist:after, dl.polls:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
 	visibility: hidden;
 }*/
 
@@ -2562,14 +2557,14 @@ dl.icon {
 	margin-left: 30%;
 	float: none;
 }
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 
 html, body {
-	color: #999;
-	background-color: #111;
+	color: #536482;
+	background-color: #FFFFFF;
 }
 
 h1 {
@@ -2577,21 +2572,21 @@ h1 {
 }
 
 h2 {
-	color: #ddd;
+	color: #28313F;
 }
 
 h3 {
-	border-bottom-color: #333;
-	color: #999;
+	border-bottom-color: #CCCCCC;
+	color: #115098;
 }
 
 hr {
-	border-color: #000;
-	border-top-color: #333;
+	border-color: #FFFFFF;
+	border-top-color: #CCCCCC;
 }
 
 hr.dashed {
-	border-top-color: #333;
+	border-top-color: #CCCCCC;
 }
 
 /* Search box
@@ -2618,30 +2613,30 @@ hr.dashed {
 }
 
 .navbar {
-	background-color: #232323;
+	background-color: #cadceb;
 }
 
 .forabg {
-	background-color: #000;
+	background-color: #0076b1;
 	background-image: url("{T_THEME_PATH}/images/bg_list.gif");
 }
 
 .forumbg {
-	background-color: #000;
+	background-color: #12A3EB;
 	background-image: url("{T_THEME_PATH}/images/bg_header.gif");
 }
 
 .post:target .content {
-	color: #fff;
+	color: #000000;
 }
 
 .post:target h3 a {
-	color: #fff;
+	color: #000000;
 }
 
-.bg1	{ background-color: #272727; }
-.bg2	{ background-color: #232323; }
-.bg3	{ background-color: #191919; }
+.bg1	{ background-color: #ECF3F7; }
+.bg2	{ background-color: #e1ebf2; }
+.bg3	{ background-color: #cadceb; }
 
 .ucprowbg {
 	background-color: #DCDEE2;
@@ -2685,12 +2680,12 @@ table.table1 tbody tr {
 }
 
 table.table1 tbody tr:hover, table.table1 tbody tr.hover {
-	background-color: #4d4d4d;
+	background-color: #CFE1F6;
 	color: #000;
 }
 
 table.table1 td {
-	color: #aaa;
+	color: #536482;
 }
 
 table.table1 tbody td {
@@ -2710,7 +2705,7 @@ table.info tbody th {
 /* Misc layout styles
 ---------------------------------------- */
 dl.details dt {
-	color: #fff;
+	color: #000000;
 }
 
 dl.details dd {
@@ -2763,42 +2758,38 @@ dl.details dd {
 }
 
 .error {
-	color: #0096e1;
+	color: #BC2A4D;
 }
 
 .reported {
-	background-color: #431414;
+	background-color: #F7ECEF;
 }
 
 li.reported:hover {
-	/*background-color: #431414 !important;*/
+	background-color: #ECD5D8 !important;
 }
-.sticky {
-	background-color: #333;
-}
-
-.announce {
+.sticky, .announce {
 	/* you can add a background for stickies and announcements*/
 }
 
 div.rules {
 	background-color: #ECD5D8;
-	color: #0096e1;
+	color: #BC2A4D;
 }
 
 p.rules {
-	background-color: #000;
+	background-color: #ECD5D8;
 	background-image: none;
 }
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for links.css
 -------------------------------------------------------------- */
 
-a:link	{ color: #cadceb; }
-a:visited	{ color: #cadceb; }
-a:hover	{ color: #0096e1; }
+a:link	{ color: #105289; }
+a:visited	{ color: #105289; }
+a:hover	{ color: #D31141; }
 a:active	{ color: #368AD2; }
 
 /* Links on gradient backgrounds */
@@ -2811,7 +2802,7 @@ a:active	{ color: #368AD2; }
 }
 
 #search-box a:hover, .navbg a:hover, .forumbg .header a:hover, .forabg .header a:hover, th a:hover {
-	color: #0096E1;
+	color: #A8D8FF;
 }
 
 #search-box a:active, .navbg a:active, .forumbg .header a:active, .forabg .header a:active, th a:active {
@@ -2820,13 +2811,13 @@ a:active	{ color: #368AD2; }
 
 /* Links for forum/topic lists */
 a.forumtitle {
-	color: #ddd;
+	color: #105289;
 }
 
 /* a.forumtitle:visited { color: #105289; } */
 
 a.forumtitle:hover {
-	color: #0096e1;
+	color: #BC2A4D;
 }
 
 a.forumtitle:active {
@@ -2834,13 +2825,13 @@ a.forumtitle:active {
 }
 
 a.topictitle {
-	color: #ddd;
+	color: #105289;
 }
 
 /* a.topictitle:visited { color: #368AD2; } */
 
 a.topictitle:hover {
-	color: #0096e1;
+	color: #BC2A4D;
 }
 
 a.topictitle:active {
@@ -2873,20 +2864,20 @@ a.topictitle:active {
 
 /* Profile links */
 .postprofile a:link, .postprofile a:active, .postprofile a:visited, .postprofile dt.author a {
-	color: #CADCEB;
+	color: #105289;
 }
 
 .postprofile a:hover, .postprofile dt.author a:hover {
-	color: #0096e1;
+	color: #D31141;
 }
 
-/* Profile searchresults */
+/* Profile searchresults */	
 .search .postprofile a {
 	color: #105289;
 }
 
 .search .postprofile a:hover {
-	color: #0096e1;
+	color: #D31141;
 }
 
 /* Back to top of page */
@@ -2917,22 +2908,22 @@ a.right:hover {
 }
 
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for content.css
 -------------------------------------------------------------- */
 
 ul.forums {
-	background-color: #232323;
+	background-color: #eef5f9;
 	background-image: url("{T_THEME_PATH}/images/gradient.gif");
 }
 
 ul.topiclist li {
-	color: #aaa;
+	color: #4C5D77;
 }
 
 ul.topiclist dd {
-	border-left-color: #000;
+	border-left-color: #FFFFFF;
 }
 
 .rtl ul.topiclist dd {
@@ -2949,20 +2940,20 @@ ul.topiclist li.row dt a.subforum.unread {
 }
 
 li.row {
-	border-top-color:  #000;
-	border-bottom-color: #00151f;
+	border-top-color:  #FFFFFF;
+	border-bottom-color: #00608F;
 }
 
 li.row strong {
-	color: #fff;
+	color: #000000;
 }
 
 li.row:hover {
-	background-color: #4d4d4d;
+	background-color: #F6F4D0;
 }
 
 li.row:hover dd {
-	border-left-color: #000;
+	border-left-color: #CCCCCC;
 }
 
 .rtl li.row:hover dd {
@@ -2982,13 +2973,13 @@ ul.topiclist dd.searchextra {
 /* Post body styles
 ----------------------------------------*/
 .postbody {
-	color: #ddd;
+	color: #333333;
 }
 
 /* Content container styles
 ----------------------------------------*/
 .content {
-	color: #ddd;
+	color: #333333;
 }
 
 .content h2, .panel h2 {
@@ -2997,12 +2988,12 @@ ul.topiclist dd.searchextra {
 }
 
 dl.faq dt {
-	color: #fff;
+	color: #333333;
 }
 
 .posthilit {
 	background-color: #F3BFCC;
-	color: #0096e1;
+	color: #BC2A4D;
 }
 
 /* Post noticies */
@@ -3014,19 +3005,33 @@ dl.faq dt {
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-	background-color: #333;
+	background-color: #EBEADD;
 	background-image: url("{T_THEME_PATH}/images/quote.png");
-	border-color:#1a1a1a;
+	border-color:#DBDBCE;
 }
 
 blockquote blockquote {
 	/* Nested quotes */
-	background-color:#444;
+	background-color:#EFEED9;
 }
 
 blockquote blockquote blockquote {
 	/* Nested quotes */
-	background-color: #333;
+	background-color: #EBEADD;
+}
+
+/* Code block */
+dl.codebox {
+	background-color: #FFFFFF;
+	border-color: #C9D2D8;
+}
+
+dl.codebox dt {
+	border-bottom-color:  #CCCCCC;
+}
+
+dl.codebox code {
+	color: #2E8B57;
 }
 
 .syntaxbg		{ color: #FFFFFF; }
@@ -3141,6 +3146,7 @@ fieldset.polls dd div {
 
 /* Poster profile block
 ----------------------------------------*/
+
 .rtl .postprofile {
 	border-right-color: #FFFFFF;
 	border-left-color: transparent;
@@ -3152,14 +3158,14 @@ fieldset.polls dd div {
 }
 
 .postprofile strong {
-	color: #ccc;
+	color: #000;
 }
 
 .online {
 	/*background-image: url("{T_IMAGESET_LANG_PATH}/icon_user_online.gif");*/
 }
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for buttons.css
 -------------------------------------------------------------- */
@@ -3218,7 +3224,7 @@ a.fontsize {
 .info-icon, .info-icon a			{ background-image: url("{IMG_ICON_POST_INFO_SRC}"); }
 .warn-icon, .warn-icon a			{ background-image: url("{IMG_ICON_USER_WARN_SRC}"); } /* Need updated warn icon */
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for cp.css
 -------------------------------------------------------------- */
@@ -3227,7 +3233,7 @@ Colours and backgrounds for cp.css
 ----------------------------------------*/
 
 #cp-main h3, #cp-main hr, #cp-menu hr {
-	border-color: #333;
+	border-color: #A4B3BF;
 }
 
 #cp-main .panel li.row {
@@ -3240,11 +3246,11 @@ ul.cplist {
 }
 
 #cp-main .panel li.header dd, #cp-main .panel li.header dt {
-	color: #fff;
+	color: #000000;
 }
 
 #cp-main table.table1 thead th {
-	color: #aaa;
+	color: #333333;
 	border-bottom-color: #333333;
 }
 
@@ -3265,7 +3271,7 @@ ul.cplist {
 }
 
 #tabs a:hover span {
-	color: #0096e1;
+	color: #BC2A4D;
 }
 
 #tabs .activetab a {
@@ -3280,40 +3286,57 @@ ul.cplist {
 	color: #000000;
 }
 
+/* Mini tabbed menu used in MCP
+----------------------------------------*/
+#minitabs li {
+	background-color: #E1EBF2;
+}
+
+#minitabs li.activetab {
+	background-color: #F9F9F9;
+}
+
+#minitabs li.activetab a, #minitabs li.activetab a:hover {
+	color: #333333;
+}
 
 /* UCP navigation menu
 ----------------------------------------*/
 
 /* Link styles for the sub-section links */
 #navigation a {
-	color: #ddd;
-	background-color: #272727;
-	/*background-image: url("{T_THEME_PATH}/images/bg_menu.gif");*/
+	color: #333;
+	background-color: #B2C2CF;
+	background-image: url("{T_THEME_PATH}/images/bg_menu.gif");
 }
 
 #navigation a:hover {
-	background-color: #4d4d4d;
-	color: #0096e1;
+	background-color: #aabac6;
+	color: #BC2A4D;
 }
 
 #navigation #active-subsection a {
-	color: #0096e1;
-	background-color: #4d4d4d;
+	color: #D31141;
+	background-color: #F9F9F9;
 	background-image: none;
 }
 
 #navigation #active-subsection a:hover {
-	color: #0096e1;
+	color: #D31141;
 }
 
 /* Preferences pane layout
 ----------------------------------------*/
 #cp-main h2 {
-	color: #ddd;
+	color: #333333;
 }
 
 #cp-main .panel {
-	background-color: #232323;
+	background-color: #F9F9F9;
+}
+
+#cp-main .pm {
+	background-color: #FFFFFF;
 }
 
 #cp-main span.corners-top, #cp-menu span.corners-top {
@@ -3358,8 +3381,8 @@ ul.cplist {
 
 /* PM marking colours */
 .pmlist li.pm_message_reported_colour, .pm_message_reported_colour {
-	border-left-color: #0096e1;
-	border-right-color: #0096e1;
+	border-left-color: #BC2A4D;
+	border-right-color: #BC2A4D;
 }
 
 .pmlist li.pm_marked_colour, .pm_marked_colour {
@@ -3388,7 +3411,7 @@ pmlist li.pm_foe_colour, .pm_foe_colour {
 	background-color: #EEE;
 }
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for forms.css
 -------------------------------------------------------------- */
@@ -3397,17 +3420,12 @@ Colours and backgrounds for forms.css
 ----------------------------------------*/
 select {
 	border-color: #666666;
-	background-color: #232323;
-	color: #fff;
-}
-
-option {
-	background-color: #232323;
-	color: #fff;
+	background-color: #FAFAFA;
+	color: #000;
 }
 
 label {
-	color: #ccc;
+	color: #425067;
 }
 
 option.disabled-option {
@@ -3417,12 +3435,12 @@ option.disabled-option {
 /* Definition list layout for forms
 ---------------------------------------- */
 dd label {
-	color: #ccc;
+	color: #333;
 }
 
 /* Hover effects */
 fieldset dl:hover dt label {
-	color: #0096E1;
+	color: #000000;
 }
 
 fieldset.fields2 dl:hover dt label {
@@ -3438,29 +3456,28 @@ fieldset.quick-login input.inputbox {
 ----------------------------------------*/
 
 #message-box textarea {
-	color: #ccc;
-	background-color: #232323;
+	color: #333333;
 }
 
 /* Input field styles
 ---------------------------------------- */
 .inputbox {
-	background-color: #232323;
+	background-color: #FFFFFF; 
 	border: 1px solid #B4BAC0;
-	color: #ccc;
+	color: #333333;
 }
 
 .inputbox:hover,
 .inputbox:focus {
-	border-color: #0096e1;
+	border-color: #11A3EA;
 }
 
 /* Form button styles
 ---------------------------------------- */
 
 a.button1, input.button1, input.button3, a.button2, input.button2 {
-	color: #fff;
-	background-color: #000;
+	color: #000;
+	background-color: #FAFAFA;
 	background-image: url("{T_THEME_PATH}/images/bg_button.gif");
 }
 
@@ -3484,8 +3501,8 @@ a.button1, a.button1:link, a.button1:visited, a.button1:active, a.button2, a.but
 
 /* Hover states */
 a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
-	border-color: #0096e1;
-	color: #0096e1;
+	border-color: #BC2A4D;
+	color: #BC2A4D;
 }
 
 input.search {
@@ -3496,6 +3513,25 @@ input.disabled {
 	color: #666666;
 }
 
+/**
+ * Bilderleiste oben auf der Übersicht
+ */
+ul#headerimg li{display:block;float:left;width:160px;height:100px}
+
+/* Fix für Scrollbar-Problem an Attachements #jh */
+#cboxLoadedContent {
+	overflow: hidden !important;
+}
+
+
+
+
+
+/* limit effective height of signature to three lines per Rules */
+.signature {
+	max-height: 4.5em;
+}
+
 table.table1 {
 	width: 99%;		/* IE < 6 browsers */
 	/* Tantek hack */
@@ -3504,15 +3540,3 @@ table.table1 {
 	width: 100%;
 }
 html>body table.table1 { width: 100%; }	/* Reset 100% for opera */
-
-/* limit effective height of signature to three lines per Rules */
-.signature {
-	max-height: 4.5em;
-}
-
-ul#headerimg li {
-	display: block;
-	float: left;
-	width: 160px;
-	height: 100px
-}
