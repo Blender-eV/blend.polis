@@ -1,10 +1,10 @@
 /*  phpBB 3.0 Style Sheet
     --------------------------------------------------------------
-	Style name:		light
+	Style name:		standard
 	Based on style:	proSilver (this is the default phpBB 3 style)
 	Original author:	subBlue ( http://www.subBlue.com/ )
-	Modified by:
-
+	Modified by:		
+	
 	Copyright 2006 phpBB Group ( http://www.phpbb.com/ )
     --------------------------------------------------------------
 */
@@ -416,7 +416,7 @@ table.info tbody th {
 
 /* Misc layout styles
 ---------------------------------------- */
-/* column[1-2] styles are containers for two column layouts
+/* column[1-2] styles are containers for two column layouts 
    Also see tweaks.css */
 .column1 {
 	float: left;
@@ -737,16 +737,16 @@ a.topictitle:active {
 }
 
 
-/* Profile searchresults */
+/* Profile searchresults */	
 .search .postprofile a {
 	color: #898989;
-	text-decoration: none;
+	text-decoration: none; 
 	font-weight: normal;
 }
 
 .search .postprofile a:hover {
 	color: #d3d3d3;
-	text-decoration: underline;
+	text-decoration: underline; 
 }
 
 /* Back to top of page */
@@ -1234,7 +1234,7 @@ blockquote {
 blockquote blockquote {
 	/* Nested quotes */
 	font-size: 1em;
-	margin: 0.5em 1px 0 15px;
+	margin: 0.5em 1px 0 15px;	
 }
 
 blockquote cite {
@@ -1258,11 +1258,8 @@ blockquote.uncited {
 dl.codebox {
 	padding: 3px;
 	background-color: #FFFFFF;
-	border: 1px solid #C9D2D8;
+	border: 1px solid #d8d8d8;
 	font-size: 1em;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:5px;
 }
 
 dl.codebox dt {
@@ -1288,7 +1285,7 @@ dl.codebox code {
 	padding-top: 5px;
 	font: 0.9em Monaco, "Andale Mono","Courier New", Courier, mono;
 	line-height: 1.3em;
-	color: #2E8B57;
+	color: #8b8b8b;
 	margin: 2px 0;
 }
 
@@ -1299,18 +1296,11 @@ dl.codebox code {
 .syntaxkeyword	{ color: #585858; }
 .syntaxstring	{ color: #a7a7a7; }
 
-kbd {
-	border: 0.2em solid;
-	border-color: #bbb #999 #999 #bbb;
-	padding: 0 0.4em;
-	background: #ccc;
-}
-
 /* Attachments
 ----------------------------------------*/
 .attachbox {
 	float: left;
-	width: auto;
+	width: auto; 
 	margin: 5px 5px 5px 0;
 	padding: 6px;
 	background-color: #FFFFFF;
@@ -1389,7 +1379,7 @@ dl.file dt {
 dl.file dd {
 	color: #666666;
 	margin: 0;
-	padding: 0;
+	padding: 0;	
 }
 
 dl.thumbnail img {
@@ -1913,7 +1903,7 @@ ul.cplist {
 	padding: 0 10px 4px 10px;
 	font-size: 1em;
 	font-weight: bold;
-	background-color: #E1EBF2;
+	background-color: #f2f2f2;
 	margin-left: 2px;
 }
 
@@ -2097,7 +2087,7 @@ ol.def-rules li {
 
 .pmlist li.pm_replied_colour, .pm_replied_colour {
 	border: solid 3px #c2c2c2;
-	border-width: 0 3px;
+	border-width: 0 3px;	
 }
 
 .pmlist li.pm_friend_colour, .pm_friend_colour {
@@ -2163,6 +2153,10 @@ option {
 	padding-right: 1em;
 }
 
+option.disabled-option {
+	color: graytext;
+}
+
 textarea {
 	width: 60%;
 	padding: 2px;
@@ -2190,7 +2184,7 @@ fieldset dl {
 }
 
 fieldset dt {
-	float: left;
+	float: left;	
 	width: 40%;
 	text-align: left;
 	display: block;
@@ -2491,7 +2485,7 @@ input.search {
 .tiny { width: 10%;}
 /* proSilver Style Sheet Tweaks
 
-These style definitions are mainly IE specific
+These style definitions are mainly IE specific 
 tweaks required due to its poor CSS support.
 -------------------------------------------------*/
 
@@ -2517,12 +2511,12 @@ html>body dd label input { vertical-align: text-bottom; }	/* Align checkboxes/ra
 * html .column1, * html .column2 { width: 45%; }
 
 /* Nice method for clearing floated blocks without having to insert any extra markup (like spacer above)
-   From http://www.positioniseverything.net/easyclearing.html
+   From http://www.positioniseverything.net/easyclearing.html 
 #tabs:after, #minitabs:after, .post:after, .navbar:after, fieldset dl:after, ul.topiclist dl:after, ul.linklist:after, dl.polls:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
 	visibility: hidden;
 }*/
 
@@ -2565,7 +2559,7 @@ dl.icon {
 	margin-left: 30%;
 	float: none;
 }
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for common.css
 -------------------------------------------------------------- */
@@ -2790,7 +2784,7 @@ p.rules {
 	background-image: none;
 }
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for links.css
 -------------------------------------------------------------- */
@@ -2879,7 +2873,7 @@ a.topictitle:active {
 	color: #D31141;
 }
 
-/* Profile searchresults */
+/* Profile searchresults */	
 .search .postprofile a {
 	color: #105289;
 }
@@ -2916,7 +2910,7 @@ a.right:hover {
 }
 
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for content.css
 -------------------------------------------------------------- */
@@ -3026,6 +3020,20 @@ blockquote blockquote {
 blockquote blockquote blockquote {
 	/* Nested quotes */
 	background-color: #EBEADD;
+}
+
+/* Code block */
+dl.codebox {
+	background-color: #FFFFFF;
+	border-color: #C9D2D8;
+}
+
+dl.codebox dt {
+	border-bottom-color:  #CCCCCC;
+}
+
+dl.codebox code {
+	color: #2E8B57;
 }
 
 .syntaxbg		{ color: #FFFFFF; }
@@ -3159,7 +3167,7 @@ fieldset.polls dd div {
 	/*background-image: url("{T_IMAGESET_LANG_PATH}/icon_user_online.gif");*/
 }
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for buttons.css
 -------------------------------------------------------------- */
@@ -3218,7 +3226,7 @@ a.fontsize {
 .info-icon, .info-icon a			{ background-image: url("{IMG_ICON_POST_INFO_SRC}"); }
 .warn-icon, .warn-icon a			{ background-image: url("{IMG_ICON_USER_WARN_SRC}"); } /* Need updated warn icon */
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for cp.css
 -------------------------------------------------------------- */
@@ -3278,6 +3286,20 @@ ul.cplist {
 
 #tabs .activetab a:hover span {
 	color: #000000;
+}
+
+/* Mini tabbed menu used in MCP
+----------------------------------------*/
+#minitabs li {
+	background-color: #E1EBF2;
+}
+
+#minitabs li.activetab {
+	background-color: #F9F9F9;
+}
+
+#minitabs li.activetab a, #minitabs li.activetab a:hover {
+	color: #333333;
 }
 
 /* UCP navigation menu
@@ -3391,7 +3413,7 @@ pmlist li.pm_foe_colour, .pm_foe_colour {
 	background-color: #EEE;
 }
 
-/*
+/*  	
 --------------------------------------------------------------
 Colours and backgrounds for forms.css
 -------------------------------------------------------------- */
@@ -3442,7 +3464,7 @@ fieldset.quick-login input.inputbox {
 /* Input field styles
 ---------------------------------------- */
 .inputbox {
-	background-color: #FFFFFF;
+	background-color: #FFFFFF; 
 	border: 1px solid #B4BAC0;
 	color: #333333;
 }
@@ -3493,6 +3515,25 @@ input.disabled {
 	color: #666666;
 }
 
+/**
+ * Bilderleiste oben auf der Übersicht
+ */
+ul#headerimg li{display:block;float:left;width:160px;height:100px}
+
+/* Fix für Scrollbar-Problem an Attachements #jh */
+#cboxLoadedContent {
+	overflow: hidden !important;
+}
+
+
+
+
+
+/* limit effective height of signature to three lines per Rules */
+.signature {
+	max-height: 4.5em;
+}
+
 table.table1 {
 	width: 99%;		/* IE < 6 browsers */
 	/* Tantek hack */
@@ -3501,10 +3542,3 @@ table.table1 {
 	width: 100%;
 }
 html>body table.table1 { width: 100%; }	/* Reset 100% for opera */
-
-ul#headerimg li {
-	display: block;
-	float: left;
-	width: 160px;
-	height: 100px
-}

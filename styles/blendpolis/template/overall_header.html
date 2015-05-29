@@ -95,7 +95,7 @@
 			<div class="inner"><span class="corners-top"><span></span></span>
 
 			<ul class="linklist navlinks">
-				<li class="icon-home"><a href="{U_INDEX}" accesskey="h">{L_INDEX}</a> <!-- BEGIN navlinks --> <strong>&#8249;</strong> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks --></li>
+				<li class="icon-home"><a href="{U_INDEX}" accesskey="h">{L_INDEX}</a> <!-- BEGIN navlinks --> <strong>&#8249;</strong> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks --><a href="{U_INDEX}" class="headlinkbase" accesskey="h"><span class="headlinkspan"></span></a></li>
 
 				<li class="rightside"><a href="#" onclick="fontsizeup(); return false;" onkeypress="return fontsizeup(event);" class="fontsize" title="{L_CHANGE_FONT_SIZE}">{L_CHANGE_FONT_SIZE}</a></li>
 
@@ -103,6 +103,8 @@
 				<!-- IF U_EMAIL_PM --><li class="rightside"><a href="{U_EMAIL_PM}" title="{L_EMAIL_PM}" class="sendemail">{L_EMAIL_PM}</a></li><!-- ENDIF -->
 				<!-- IF U_PRINT_TOPIC --><li class="rightside"><a href="{U_PRINT_TOPIC}" title="{L_PRINT_TOPIC}" accesskey="p" class="print">{L_PRINT_TOPIC}</a></li><!-- ENDIF -->
 				<!-- IF U_PRINT_PM --><li class="rightside"><a href="{U_PRINT_PM}" title="{L_PRINT_PM}" accesskey="p" class="print">{L_PRINT_PM}</a></li><!-- ENDIF -->
+
+				<!-- Blender Logo link <li class="rightside"><a href="https://www.blender.org/" title="blender.org - Home of the Blender project - Free and Open 3D Creation Software" target="_blank" hreflang="en" class="blender-org-link"><img src="images/icons/blenderLogoBW.bw.png" style="height: 25px; display: none;"/></a></li> -->
 			</ul>
 
 			<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
@@ -124,7 +126,7 @@
 				<li><a href="search.php">Suche</a></li>
 				<li class="icon-faq"><a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}">{L_FAQ}</a></li>
 				<!-- IF not S_IS_BOT -->
-					<!-- IF S_DISPLAY_MEMBERLIST --><li class="icon-members"><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}">{L_MEMBERLIST}</a></li><!-- ENDIF -->
+					<!-- IF S_DISPLAY_MEMBERLIST --><li class="icon-members"><a href="{U_MEMBERLIST}?first_char=" title="{L_MEMBERLIST_EXPLAIN}">{L_MEMBERLIST}</a></li><!-- ENDIF -->
 					<!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --><li class="icon-register"><a href="{U_REGISTER}">{L_REGISTER}</a></li><!-- ENDIF -->
 					<li class="icon-logout"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x">{L_LOGIN_LOGOUT}</a></li>
 				<!-- ENDIF -->
