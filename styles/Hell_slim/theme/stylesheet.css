@@ -1,12 +1,16 @@
 /*  phpBB 3.0 Style Sheet
     --------------------------------------------------------------
-	Style name:			Hell
-	Based on style:		proSilver
+	Style name:			Hell_slim
+	Based on style:		proSilver (this is the default phpBB 3 style)
 	Original author:	subBlue ( http://www.subBlue.com/ )
-	Modified by:		Julian Herzog (2015)
+	Modified by:		JulianHzg (2015)
 
 	Copyright 2006 phpBB Group ( http://www.phpbb.com/ )
     --------------------------------------------------------------
+*/
+
+/*
+	derivative of Hell:
 */
 
 /*	Version log
@@ -160,7 +164,7 @@ p.right {
 	width: 100%;
 	background-color: #fcfcfc;
 	border-top: 2px solid #000;
-	background-image: url("styles/Hell/theme/images/bg_bar_top.png");
+	background-image: url("styles/Hell_slim/theme/images/bg_bar_top.png");
 	background-repeat: repeat-x;
 	background-position: center top;
 	background-size: 100% 8em;
@@ -291,7 +295,7 @@ a#logo:hover {
 #page-header .navbar {
 	padding: 3px 0 20px 0;
 	margin: -3px 0 0 0;
-	background-image: url("styles/Hell/theme/images/header_graphic.png");
+	background-image: url("styles/Hell_slim/theme/images/header_graphic.png");
 	background-repeat: no-repeat;
 	background-position: center top;
 }
@@ -302,7 +306,7 @@ only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2) { 
 	#page-header .navbar {
-		background-image: url("styles/Hell/theme/images/header_graphic.2.png");
+		background-image: url("styles/Hell_slim/theme/images/header_graphic.2.png");
 		background-size: 236px 85px;
 	}
 }
@@ -315,7 +319,7 @@ only screen and (        min-device-pixel-ratio: 2) {
 }
 
 /* #page-header .navbar .inner {
-	background-image: url("styles/Hell/theme/images/navlinks.bg.png");
+	background-image: url("styles/Hell_slim/theme/images/navlinks.bg.png");
 } */
 
 #page-footer .navbar {
@@ -993,7 +997,7 @@ ul.topiclist.topics {
 }
 
 li.header {
-/* 	background-image: url("styles/Hell/theme/images/li.header.bg.png"); /* base-color: 00c4ff #jh */
+/* 	background-image: url("styles/Hell_slim/theme/images/li.header.bg.png"); /* base-color: 00c4ff #jh */
 /* 	background-repeat: no-repeat; #jh preventing it from spilling into next line */
 	background-color: transparent;
 	color: #121212;
@@ -2970,9 +2974,9 @@ tweaks required due to its poor CSS support.
 * html input { font-size: 100%; }
 * html hr { margin: 0; }
 * html span.corners-top, 
-* html span.corners-bottom { background-image: url("styles/Hell/theme/images/corners_left.gif"); }
+* html span.corners-bottom { background-image: url("styles/Hell_slim/theme/images/corners_left.gif"); }
 * html span.corners-top span, 
-* html span.corners-bottom span { background-image: url("styles/Hell/theme/images/corners_right.gif"); }
+* html span.corners-bottom span { background-image: url("styles/Hell_slim/theme/images/corners_right.gif"); }
 
 
 
@@ -3092,7 +3096,7 @@ hr.dashed {
 ---------------------------------------- */
 .headerbar {
 	background-color: #12A3EB; /* accent bg */
-	background-image: url("styles/Hell/theme/images/bg_header.gif");
+	background-image: url("styles/Hell_slim/theme/images/bg_header.gif");
 	color: #FFFFFF;
 }
 
@@ -3133,19 +3137,19 @@ hr.dashed {
 .bg3	{ background-color: #eff2f2; }
 
 span.corners-top {
-	background-image: url("styles/Hell/theme/images/corners_left.png");
+	background-image: url("styles/Hell_slim/theme/images/corners_left.png");
 }
 
 span.corners-top span {
-	background-image: url("styles/Hell/theme/images/corners_right.png");
+	background-image: url("styles/Hell_slim/theme/images/corners_right.png");
 }
 
 span.corners-bottom {
-	background-image: url("styles/Hell/theme/images/corners_left.png");
+	background-image: url("styles/Hell_slim/theme/images/corners_left.png");
 }
 
 span.corners-bottom span {
-	background-image: url("styles/Hell/theme/images/corners_right.png");
+	background-image: url("styles/Hell_slim/theme/images/corners_right.png");
 }
 
 /* Horizontal lists
@@ -3357,10 +3361,10 @@ a.top2 {
 }
 
 /* Arrow links  */
-a.up		{ background-image: url("styles/Hell/theme/images/arrow_up.gif") }
-a.down		{ background-image: url("styles/Hell/theme/images/arrow_down.gif") }
-a.left		{ background-image: url("styles/Hell/theme/images/arrow_left.gif") }
-a.right		{ background-image: url("styles/Hell/theme/images/arrow_right.gif") }
+a.up		{ background-image: url("styles/Hell_slim/theme/images/arrow_up.gif") }
+a.down		{ background-image: url("styles/Hell_slim/theme/images/arrow_down.gif") }
+a.left		{ background-image: url("styles/Hell_slim/theme/images/arrow_left.gif") }
+a.right		{ background-image: url("styles/Hell_slim/theme/images/arrow_right.gif") }
 
 a.up:hover {
 	background-color: transparent;
@@ -3382,7 +3386,7 @@ Colours and backgrounds for content.css
 
 ul.forums {
 /*	background-color: #111;
-	background-image: url("styles/Hell/theme/images/gradient.gif"); */
+	background-image: url("styles/Hell_slim/theme/images/gradient.gif"); */
 }
 
 ul.topiclist li.row {
@@ -3474,7 +3478,7 @@ dl.faq dt {
 /* Quote block */
 blockquote {
 	background-color: #dfe6e5;
-	background-image: url("styles/Hell/theme/images/quote.png");
+	background-image: url("styles/Hell_slim/theme/images/quote.png");
 }
 
 blockquote blockquote {
@@ -3665,32 +3669,32 @@ Colours and backgrounds for buttons.css
 } */
 
 a.print {
-	background-image: url("styles/Hell/theme/images/icon_print_b.png");
+	background-image: url("styles/Hell_slim/theme/images/icon_print_b.png");
 }
 
 a.sendemail {
-	background-image: url("styles/Hell/theme/images/icon_sendemail_b.png");
+	background-image: url("styles/Hell_slim/theme/images/icon_sendemail_b.png");
 }
 
 a.fontsize {
-	background-image: url("styles/Hell/theme/images/icon_fontsize.gif");
+	background-image: url("styles/Hell_slim/theme/images/icon_fontsize.gif");
 }
 
 /* Icon images
 ---------------------------------------- */
-/* .sitehome						{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-faq						{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-members					{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-home						{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-ucp						{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-register					{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-logout					{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-bookmark					{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-bump						{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-subscribe					{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-unsubscribe				{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-pages						{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
-.icon-search					{ background-image: url("styles/Hell/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }  */
+/* .sitehome						{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-faq						{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-members					{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-home						{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-ucp						{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-register					{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-logout					{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-bookmark					{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-bump						{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-subscribe					{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-unsubscribe				{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-pages						{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }
+.icon-search					{ background-image: url("styles/Hell_slim/theme/images/icon_bigsquare.png"); background-position: 4px 10px; }  */
 
 /* instead: #jh# */
 .sitehome, 
@@ -3846,36 +3850,36 @@ ul.cplist {
 }
 
 #cp-main span.corners-top, #cp-menu span.corners-top {
-	/* background-image: url("styles/Hell/theme/images/corners_left2.gif"); */
+	/* background-image: url("styles/Hell_slim/theme/images/corners_left2.gif"); */
 }
 
 #cp-main span.corners-top span, #cp-menu span.corners-top span {
-	/* background-image: url("styles/Hell/theme/images/corners_right2.gif"); */
+	/* background-image: url("styles/Hell_slim/theme/images/corners_right2.gif"); */
 }
 
 #cp-main span.corners-bottom, #cp-menu span.corners-bottom {
-	/* background-image: url("styles/Hell/theme/images/corners_left2.gif"); */
+	/* background-image: url("styles/Hell_slim/theme/images/corners_left2.gif"); */
 }
 
 #cp-main span.corners-bottom span, #cp-menu span.corners-bottom span {
-	/* background-image: url("styles/Hell/theme/images/corners_right2.gif"); */
+	/* background-image: url("styles/Hell_slim/theme/images/corners_right2.gif"); */
 }
 
 /* Topicreview */
 #cp-main .panel #topicreview span.corners-top, #cp-menu .panel #topicreview span.corners-top {
-	/* background-image: url("styles/Hell/theme/images/corners_left.gif"); */
+	/* background-image: url("styles/Hell_slim/theme/images/corners_left.gif"); */
 }
 
 #cp-main .panel #topicreview span.corners-top span, #cp-menu .panel #topicreview span.corners-top span {
-	/* background-image: url("styles/Hell/theme/images/corners_right.gif"); */
+	/* background-image: url("styles/Hell_slim/theme/images/corners_right.gif"); */
 }
 
 #cp-main .panel #topicreview span.corners-bottom, #cp-menu .panel #topicreview span.corners-bottom {
-	/* background-image: url("styles/Hell/theme/images/corners_left.gif"); */
+	/* background-image: url("styles/Hell_slim/theme/images/corners_left.gif"); */
 }
 
 #cp-main .panel #topicreview span.corners-bottom span, #cp-menu .panel #topicreview span.corners-bottom span {
-	/* background-image: url("styles/Hell/theme/images/corners_right.gif"); */
+	/* background-image: url("styles/Hell_slim/theme/images/corners_right.gif"); */
 }
 
 /* PM Styles
@@ -4094,7 +4098,7 @@ ul#headerimg li#stretch-li-element {
 }
 #cboxClose {
 	color: transparent !important;
-	background-image: url("styles/Hell/theme/images/close_cross.png");
+	background-image: url("styles/Hell_slim/theme/images/close_cross.png");
 	height: 16px;
 	width: 16px;
 }
@@ -4105,7 +4109,7 @@ only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2) { 
 	#cboxClose {
-		background-image: url("styles/Hell/theme/images/close_cross.2.png");
+		background-image: url("styles/Hell_slim/theme/images/close_cross.2.png");
 		background-size: 16px 16px;
 	}
 }
@@ -4261,33 +4265,33 @@ li.row dl.icon:hover, li.row:hover dl.icon {
 
 @font-face {
     font-family: 'titillium';
-    src: url('styles/Hell/theme/fonts/titillium-semiboldupright-webfont.eot');
-    src: url('styles/Hell/theme/fonts/titillium-semiboldupright-webfont.eot?#iefix') format('embedded-opentype'),
-         url('styles/Hell/theme/fonts/titillium-semiboldupright-webfont.woff') format('woff'),
-         url('styles/Hell/theme/fonts/titillium-semiboldupright-webfont.ttf') format('truetype'),
-         url('styles/Hell/theme/fonts/titillium-semiboldupright-webfont.svg#titilliumsemibold_upright') format('svg');
+    src: url('styles/Hell_slim/theme/fonts/titillium-semiboldupright-webfont.eot');
+    src: url('styles/Hell_slim/theme/fonts/titillium-semiboldupright-webfont.eot?#iefix') format('embedded-opentype'),
+         url('styles/Hell_slim/theme/fonts/titillium-semiboldupright-webfont.woff') format('woff'),
+         url('styles/Hell_slim/theme/fonts/titillium-semiboldupright-webfont.ttf') format('truetype'),
+         url('styles/Hell_slim/theme/fonts/titillium-semiboldupright-webfont.svg#titilliumsemibold_upright') format('svg');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'titillium';
-    src: url('styles/Hell/theme/fonts/titillium-boldupright-webfont.eot');
-    src: url('styles/Hell/theme/fonts/titillium-boldupright-webfont.eot?#iefix') format('embedded-opentype'),
-         url('styles/Hell/theme/fonts/titillium-boldupright-webfont.woff') format('woff'),
-         url('styles/Hell/theme/fonts/titillium-boldupright-webfont.ttf') format('truetype'),
-         url('styles/Hell/theme/fonts/titillium-boldupright-webfont.svg#titilliumbold_upright') format('svg');
+    src: url('styles/Hell_slim/theme/fonts/titillium-boldupright-webfont.eot');
+    src: url('styles/Hell_slim/theme/fonts/titillium-boldupright-webfont.eot?#iefix') format('embedded-opentype'),
+         url('styles/Hell_slim/theme/fonts/titillium-boldupright-webfont.woff') format('woff'),
+         url('styles/Hell_slim/theme/fonts/titillium-boldupright-webfont.ttf') format('truetype'),
+         url('styles/Hell_slim/theme/fonts/titillium-boldupright-webfont.svg#titilliumbold_upright') format('svg');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'titillium';
-    src: url('styles/Hell/theme/fonts/titillium-semibold-webfont.eot');
-    src: url('styles/Hell/theme/fonts/titillium-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('styles/Hell/theme/fonts/titillium-semibold-webfont.woff') format('woff'),
-         url('styles/Hell/theme/fonts/titillium-semibold-webfont.ttf') format('truetype'),
-         url('styles/Hell/theme/fonts/titillium-semibold-webfont.svg#titilliumbold') format('svg');
+    src: url('styles/Hell_slim/theme/fonts/titillium-semibold-webfont.eot');
+    src: url('styles/Hell_slim/theme/fonts/titillium-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('styles/Hell_slim/theme/fonts/titillium-semibold-webfont.woff') format('woff'),
+         url('styles/Hell_slim/theme/fonts/titillium-semibold-webfont.ttf') format('truetype'),
+         url('styles/Hell_slim/theme/fonts/titillium-semibold-webfont.svg#titilliumbold') format('svg');
     font-weight: 500;
     font-style: normal;
 }
@@ -4411,3 +4415,12 @@ a.blender-org-link:hover img {
 }
 
 html>body table.table1 { width: 100%; }	/* Reset 100% for opera */
+
+/* end of Hell theme */
+
+#page-body {
+	max-width: 1090px;
+}
+.navbar .inner {
+	max-width: 1090px;
+}

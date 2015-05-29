@@ -1,9 +1,12 @@
 <!-- INCLUDE overall_header.html -->
-<div><ul id="headerimg">
+<div id="headerimgctnr" ><div class="headerimg-overlap"><ul id="headerimg">
+	<li class="thinli" style="width: 0px;"></li>
 	<!-- BEGIN slot -->
 	<li><a href="{slot.U_TOPIC}" onfocus="blur()"><img src="{slot.U_IMAGE}" alt="" title="{slot.TOPIC_TITLE}" width="160" height="100" /></a></li>
+	<li class="thinli" style="width: 0px;"></li>
 	<!-- END slot -->
-</ul></div>
+	<li id="stretch-li-element" style="width: 100%; display: none;"><span></span></li>
+</ul></div></div>
 
 <p class="{S_CONTENT_FLOW_END}<!-- IF S_USER_LOGGED_IN --> rightside<!-- ENDIF -->"><!-- IF S_USER_LOGGED_IN -->{LAST_VISIT_DATE}<!-- ELSE -->{CURRENT_TIME}<!-- ENDIF --></p>
 <!-- IF U_MCP --><p>{CURRENT_TIME} <br />[&nbsp;<a href="{U_MCP}">{L_MCP}</a>&nbsp;]</p><!-- ELSEIF S_USER_LOGGED_IN --><p>{CURRENT_TIME}</p><!-- ENDIF -->
