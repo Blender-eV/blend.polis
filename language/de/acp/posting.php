@@ -4,12 +4,12 @@
 * acp_posting [Deutsch — Du]
 *
 * @package language
-* @version $Id: posting.php 566 2011-06-15 20:18:41Z philippk $
+* @version $Id: posting.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -86,7 +86,8 @@ $lang = array_merge($lang, array(
 		'NUMBER'		=> 'Ziffernfolgen',
 		'EMAIL'			=> 'Eine gültige E-Mail-Adresse',
 		'URL'			=> 'Eine gültige URL eines beliebigen Protokolls (http, ftp usw. — kann nicht für JavaScript-Exploits verwendet werden). Falls nicht angegeben, wird „http://“ vorangestellt.',
-		'LOCAL_URL'		=> 'Eine lokale URL. Muss relativ zur Themenansicht angegeben werden; Protokoll und Domain darf nicht vorangestellt werden.',
+		'LOCAL_URL'		=> 'Eine lokale URL. Muss relativ zur Themenansicht angegeben werden. Protokoll und Domain darf nicht vorangestellt werden, da den Links „%s“ vorangestellt wird.',
+		'RELATIVE_URL'	=> 'Eine relative URL. Kann verwendet werden, um Teile einer URL zu prüfen. Achtung: auch eine vollständige URL ist eine gültige relative URL. Wenn relative URLs zur Adresse des Boards verwendet werden sollen, sollte der LOCAL_URL-Token verwendet werden.',
 		'COLOR'			=> 'Eine HTML-Farbe. Es kann entweder der hexadezimale Wert (z.&nbsp;B. <samp>#FF1234</samp>) oder ein <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">CSS-Farbwert</a> wie z.&nbsp;B. <samp>fuchsia</samp> oder <samp>InactiveBorder</samp> angegeben werden.'
 	)
 ));

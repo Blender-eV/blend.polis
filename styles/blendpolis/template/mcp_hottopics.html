@@ -1,0 +1,25 @@
+<!-- INCLUDE mcp_header.html -->
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<div class="content">
+		<h2>Liste der Themen, sortiert nach Datum der letzten Aktualisierung. Ältestes Thema ist oben.</h2>
+		<!-- BEGIN slot -->
+		<fieldset>
+			<h3>Slot {slot.SLOT_ID}</h3>
+			<dl>
+			<dt><label>Thema:</label></dt>
+			<dd><a href="{slot.U_TOPIC}">{slot.TOPIC_TITLE}</a></dd>
+			</dl>
+			<dl>
+			<dt><label>Zuletzt aktualisiert:</label></dt>
+			<dd>{slot.LAST_UPDATE}</dd>
+			</dl>
+		</fieldset>
+		<!-- END slot -->
+	</div>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<!-- INCLUDE mcp_footer.html -->

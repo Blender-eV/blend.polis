@@ -4,12 +4,12 @@
 * acp_styles [Deutsch — Du]
 *
 * @package language
-* @version $Id: styles.php 566 2011-06-15 20:18:41Z philippk $
+* @version $Id: styles.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -270,6 +270,7 @@ $lang = array_merge($lang, array(
 	'IMG_USER_ICON9'		=> 'Benutzerdefinierte Grafik 9',
 	'IMG_USER_ICON10'		=> 'Benutzerdefinierte Grafik 10',
 
+	'INACTIVE_STYLES'			=> 'Inaktive Styles',
 	'INCLUDE_DIMENSIONS'		=> 'Größenangaben speichern',
 	'INCLUDE_IMAGESET'			=> 'Grafiksammlung einbeziehen',
 	'INCLUDE_TEMPLATE'			=> 'Template einbeziehen',

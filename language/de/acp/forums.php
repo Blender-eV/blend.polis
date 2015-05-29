@@ -4,12 +4,12 @@
 * acp_forums [Deutsch — Du]
 *
 * @package language
-* @version $Id: forums.php 581 2011-11-22 19:15:46Z philippk $
+* @version $Id: forums.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -73,6 +73,8 @@ $lang = array_merge($lang, array(
 	'ENABLE_RECENT'					=> 'In aktiven Themen anzeigen',
 	'ENABLE_RECENT_EXPLAIN'			=> 'Wenn diese Einstellung auf „Ja“ gesetzt wird, werden Themen aus diesem Forum in der Liste der aktiven Themen angezeigt.',
 	'ENABLE_TOPIC_ICONS'			=> 'Themen-Symbole aktivieren',
+	'ENABLE_TOPIC_PREVIEW'			=> 'Vorschaubilder aktivieren',
+	'ENABLE_TOPIC_PREVIEW_EXPLAIN'	=> 'Wenn hier &quot;Ja&quot; steht werden in der Themenübersicht Vorschaubilder angezeigt.',
 
 	'FORUM_ADMIN'						=> 'Foren-Administration',
 	'FORUM_ADMIN_EXPLAIN'				=> 'In phpBB3 ist alles forenbasiert. Eine Kategorie ist hier nur eine spezielle Art von Forum. Jedes Forum kann eine unbegrenzte Anzahl an Unterforen haben und du kannst festlegen, ob in ihnen Beiträge geschrieben werden dürfen oder nicht (dann verhält es sich wie eine Kategorie). Hier kannst du Foren hinzufügen, bearbeiten, löschen, schließen und wieder öffnen wie auch zusätzliche Kontrollfunktionen einstellen. Wenn deine Beitrags- und Themeninformationen nicht mehr synchron sind, kannst du das Forum auch resynchronisieren. <strong>Du musst passende Berechtigungen erstellen oder kopieren, damit ein neu erstelltes Forum auch angezeigt wird.</strong>',

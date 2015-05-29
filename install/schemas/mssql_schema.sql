@@ -443,6 +443,7 @@ CREATE TABLE [phpbb_forums] (
 	[display_on_index] [int] DEFAULT (1) NOT NULL ,
 	[enable_indexing] [int] DEFAULT (1) NOT NULL ,
 	[enable_icons] [int] DEFAULT (1) NOT NULL ,
+	[enable_preview] [int] DEFAULT (0) NOT NULL ,
 	[enable_prune] [int] DEFAULT (0) NOT NULL ,
 	[prune_next] [int] DEFAULT (0) NOT NULL ,
 	[prune_days] [int] DEFAULT (0) NOT NULL ,
@@ -974,6 +975,7 @@ CREATE TABLE [phpbb_profile_fields] (
 	[field_default_value] [varchar] (255) DEFAULT ('') NOT NULL ,
 	[field_validation] [varchar] (20) DEFAULT ('') NOT NULL ,
 	[field_required] [int] DEFAULT (0) NOT NULL ,
+	[field_show_novalue] [int] DEFAULT (0) NOT NULL ,
 	[field_show_on_reg] [int] DEFAULT (0) NOT NULL ,
 	[field_show_on_vt] [int] DEFAULT (0) NOT NULL ,
 	[field_show_profile] [int] DEFAULT (0) NOT NULL ,
@@ -1453,6 +1455,7 @@ CREATE TABLE [phpbb_topics] (
 	[topic_id] [int] IDENTITY (1, 1) NOT NULL ,
 	[forum_id] [int] DEFAULT (0) NOT NULL ,
 	[icon_id] [int] DEFAULT (0) NOT NULL ,
+	[preview_id] [int] DEFAULT (0) NOT NULL ,
 	[topic_attachment] [int] DEFAULT (0) NOT NULL ,
 	[topic_approved] [int] DEFAULT (1) NOT NULL ,
 	[topic_reported] [int] DEFAULT (0) NOT NULL ,
@@ -1478,6 +1481,7 @@ CREATE TABLE [phpbb_topics] (
 	[topic_moved_id] [int] DEFAULT (0) NOT NULL ,
 	[topic_bumped] [int] DEFAULT (0) NOT NULL ,
 	[topic_bumper] [int] DEFAULT (0) NOT NULL ,
+	[topic_solved] [int] DEFAULT (0) NOT NULL ,
 	[poll_title] [varchar] (255) DEFAULT ('') NOT NULL ,
 	[poll_start] [int] DEFAULT (0) NOT NULL ,
 	[poll_length] [int] DEFAULT (0) NOT NULL ,
@@ -1756,6 +1760,26 @@ ALTER TABLE [phpbb_zebra] WITH NOCHECK ADD
 	(
 		[user_id],
 		[zebra_id]
+	)  ON [PRIMARY] 
+GO
+
+
+/*
+	Table: 'bp_hottopics'
+*/
+CREATE TABLE [bp_hottopics] (
+	[slot_id] [int] DEFAULT (0) NOT NULL ,
+	[topic_id] [int] DEFAULT (0) NOT NULL ,
+	[forum_id] [int] DEFAULT (0) NOT NULL ,
+	[image_id] [int] DEFAULT (0) NOT NULL ,
+	[last_update] [int] DEFAULT (0) NOT NULL 
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [bp_hottopics] WITH NOCHECK ADD 
+	CONSTRAINT [PK_bp_hottopics] PRIMARY KEY  CLUSTERED 
+	(
+		[slot_id]
 	)  ON [PRIMARY] 
 GO
 

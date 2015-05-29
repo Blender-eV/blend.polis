@@ -4,12 +4,12 @@
 * help_faq [Deutsch — Du]
 *
 * @package language
-* @version $Id: help_faq.php 582 2011-11-25 20:57:11Z philippk $
+* @version $Id: help_faq.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -332,11 +332,11 @@ $help = array(
 	),
 	array(
 		0 => 'Wer hat diese Forensoftware entwickelt?',
-		1 => 'Diese Software (in ihrer unmodifizierten Fassung) wurde von der <a href="http://www.phpbb.com/">phpBB Group</a> entwickelt und veröffentlicht. Sie ist urheberrechtlich geschützt. Sie wurde unter der GNU General Public License veröffentlicht und kann frei vertrieben werden. Weitere Details findest du auf der Seite der phpBB Group. Eine deutschsprachige Anlaufstelle ist unter <a href="http://www.phpBB.de/">phpBB.de</a> zu finden.'
+		1 => 'Diese Software (in ihrer unmodifizierten Fassung) wurde von der <a href="https://www.phpbb.com/">phpBB Group</a> entwickelt und veröffentlicht. Sie ist urheberrechtlich geschützt. Sie wurde unter der GNU General Public License veröffentlicht und kann frei vertrieben werden. Weitere Details findest du auf der Seite der phpBB Group. Eine deutschsprachige Anlaufstelle ist unter <a href="https://www.phpbb.de/">phpBB.de</a> zu finden.'
 	),
 	array(
 		0 => 'Warum ist Funktion x oder y nicht enthalten?',
-		1 => 'Diese Software wurde von der phpBB Group geschrieben. Wenn du denkst, dass eine Funktion implementiert werden muss, dann besuche <a href="http://www.phpbb.com/">phpbb.com</a> und warte die Stellungnahme der phpBB Group ab. Bitte schreibe Funktions-Anfragen nicht in das Forum auf phpbb.com, die phpBB Group benutzt SourceForge für die Verwaltung von Funktionswünschen. Bitte lies im Forum nach, ob es bereits eine Stellungnahme zu der gewünschten Funktion gibt. Ansonsten folge den dortigen Anweisungen zu Funktions-Anfragen.'
+		1 => 'Diese Software wurde von der phpBB Group geschrieben. Wenn du denkst, dass eine Funktion implementiert werden sollte, dann besuche <a href="https://www.phpbb.com/ideas/">phpBB Ideas</a>, wo du deine Stimme für bestehende Vorschläge abgeben oder neue Funktionen vorschlagen kannst.'
 	),
 	array(
 		0 => 'An wen soll ich mich wenden, falls es Beschwerden oder juristische Anfragen zu diesem Forum gibt?',

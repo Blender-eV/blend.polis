@@ -389,6 +389,7 @@ CREATE TABLE phpbb_forums (
 	display_on_index INT2 DEFAULT '1' NOT NULL CHECK (display_on_index >= 0),
 	enable_indexing INT2 DEFAULT '1' NOT NULL CHECK (enable_indexing >= 0),
 	enable_icons INT2 DEFAULT '1' NOT NULL CHECK (enable_icons >= 0),
+	enable_preview INT2 DEFAULT '0' NOT NULL CHECK (enable_preview >= 0),
 	enable_prune INT2 DEFAULT '0' NOT NULL CHECK (enable_prune >= 0),
 	prune_next INT4 DEFAULT '0' NOT NULL CHECK (prune_next >= 0),
 	prune_days INT4 DEFAULT '0' NOT NULL CHECK (prune_days >= 0),
@@ -761,6 +762,7 @@ CREATE TABLE phpbb_profile_fields (
 	field_default_value varchar(255) DEFAULT '' NOT NULL,
 	field_validation varchar(20) DEFAULT '' NOT NULL,
 	field_required INT2 DEFAULT '0' NOT NULL CHECK (field_required >= 0),
+	field_show_novalue INT2 DEFAULT '0' NOT NULL CHECK (field_show_novalue >= 0),
 	field_show_on_reg INT2 DEFAULT '0' NOT NULL CHECK (field_show_on_reg >= 0),
 	field_show_on_vt INT2 DEFAULT '0' NOT NULL CHECK (field_show_on_vt >= 0),
 	field_show_profile INT2 DEFAULT '0' NOT NULL CHECK (field_show_profile >= 0),
@@ -1084,6 +1086,7 @@ CREATE TABLE phpbb_topics (
 	topic_id INT4 DEFAULT nextval('phpbb_topics_seq'),
 	forum_id INT4 DEFAULT '0' NOT NULL CHECK (forum_id >= 0),
 	icon_id INT4 DEFAULT '0' NOT NULL CHECK (icon_id >= 0),
+	preview_id INT4 DEFAULT '0' NOT NULL CHECK (preview_id >= 0),
 	topic_attachment INT2 DEFAULT '0' NOT NULL CHECK (topic_attachment >= 0),
 	topic_approved INT2 DEFAULT '1' NOT NULL CHECK (topic_approved >= 0),
 	topic_reported INT2 DEFAULT '0' NOT NULL CHECK (topic_reported >= 0),
@@ -1109,6 +1112,7 @@ CREATE TABLE phpbb_topics (
 	topic_moved_id INT4 DEFAULT '0' NOT NULL CHECK (topic_moved_id >= 0),
 	topic_bumped INT2 DEFAULT '0' NOT NULL CHECK (topic_bumped >= 0),
 	topic_bumper INT4 DEFAULT '0' NOT NULL CHECK (topic_bumper >= 0),
+	topic_solved INT2 DEFAULT '0' NOT NULL CHECK (topic_solved >= 0),
 	poll_title varchar(255) DEFAULT '' NOT NULL,
 	poll_start INT4 DEFAULT '0' NOT NULL CHECK (poll_start >= 0),
 	poll_length INT4 DEFAULT '0' NOT NULL CHECK (poll_length >= 0),
@@ -1304,6 +1308,19 @@ CREATE TABLE phpbb_zebra (
 	friend INT2 DEFAULT '0' NOT NULL CHECK (friend >= 0),
 	foe INT2 DEFAULT '0' NOT NULL CHECK (foe >= 0),
 	PRIMARY KEY (user_id, zebra_id)
+);
+
+
+/*
+	Table: 'bp_hottopics'
+*/
+CREATE TABLE bp_hottopics (
+	slot_id INT2 DEFAULT '0' NOT NULL,
+	topic_id INT4 DEFAULT '0' NOT NULL CHECK (topic_id >= 0),
+	forum_id INT4 DEFAULT '0' NOT NULL CHECK (forum_id >= 0),
+	image_id INT4 DEFAULT '0' NOT NULL CHECK (image_id >= 0),
+	last_update INT4 DEFAULT '0' NOT NULL CHECK (last_update >= 0),
+	PRIMARY KEY (slot_id)
 );
 
 

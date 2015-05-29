@@ -49,6 +49,7 @@
 		<div class="pagination">
 			<!-- IF U_VIEW_UNREAD_POST and not S_IS_BOT --><a href="{U_VIEW_UNREAD_POST}">{L_VIEW_UNREAD_POST}</a> &bull; <!-- ENDIF -->{TOTAL_POSTS}
 			<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+			<!-- IF U_TOPIC_SOLVED --><br /><a href="{U_TOPIC_SOLVED}">{L_TOPIC_SOLVED}</a><!-- ENDIF -->
 		</div>
 	<!-- ENDIF -->
 
@@ -248,6 +249,7 @@
 		<div class="pagination">
 			{TOTAL_POSTS}
 			<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+			<!-- IF U_TOPIC_SOLVED --><br /><a href="{U_TOPIC_SOLVED}">{L_TOPIC_SOLVED}</a><!-- ENDIF -->
 		</div>
 	<!-- ENDIF -->
 </div>

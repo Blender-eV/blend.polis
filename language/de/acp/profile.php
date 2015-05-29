@@ -4,12 +4,12 @@
 * acp_profile [Deutsch — Du]
 *
 * @package language
-* @version $Id: profile.php 464 2010-06-15 14:47:22Z tuxman $
+* @version $Id: profile.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -74,7 +74,7 @@ $lang = array_merge($lang, array(
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Wenn diese Option gesetzt ist, wird das Feld im Kurzprofil neben den Beiträgen angezeigt.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Profilfeld öffentlich anzeigen',
 	'DISPLAY_PROFILE_FIELD_EXPLAIN'	=> 'Das Profilfeld wird an allen Stellen angezeigt, die in den Einstellungen zur Serverlast aktiviert sind. Wird diese Option auf „Nein“ gestellt, so wird das Feld im Beitrag, im Profil und in der Mitgliederliste ausgeblendet.',
-	'DROPDOWN_ENTRIES_EXPLAIN'		=> 'Gebe hier die Optionen an; jede Option in einer neuen Zeile.',
+	'DROPDOWN_ENTRIES_EXPLAIN'		=> 'Gib hier die Optionen an; jede Option in einer neuen Zeile.',
 
 	'EDIT_DROPDOWN_LANG_EXPLAIN'	=> 'Bitte beachte, dass du den Text der Optionen ändern oder neue Optionen an das Ende hinzufügen kannst. Es wird nicht empfohlen, neue Optionen zwischen bestehenden hinzuzufügen, weil dies zu falsch zugeordneten Optionen bei den Benutzern führen kann. Dies kann auch passieren, wenn du Optionen löscht, die nicht am Ende stehen. Wenn Optionen vom Ende entfernt werden, wird den Benutzern, die diese Optionen derzeit ausgewählt haben, die Standard-Option zugewiesen.',
 	'EMPTY_FIELD_IDENT'				=> 'Die	Feld-Kennung ist nicht angegeben.',
@@ -135,12 +135,14 @@ $lang = array_merge($lang, array(
 
 	'SAVE'							=> 'Speichern',
 	'SECOND_OPTION'					=> 'Zweite Option',
+	'SHOW_NOVALUE_FIELD'			=> 'Feld anzeigen, wenn kein Wert ausgewählt wurde',
+	'SHOW_NOVALUE_FIELD_EXPLAIN'	=> 'Legt fest, ob das Profilfeld angezeigt werden soll, wenn bei einem optionalen Feld kein Wert ausgewählt wurde oder der Wert eines erforderlichen Felds noch nicht festgelegt wurde.',
 	'STEP_1_EXPLAIN_CREATE'			=> 'Hier kannst du die Grundeinstellungen für dein neues Profilfeld vornehmen. Diese Angaben werden im zweiten Schritt benötigt, wo du weitere Einstellungen vornehmen und das Profilfeld weiter anpassen kannst.',
 	'STEP_1_EXPLAIN_EDIT'			=> 'Hier kannst du die Grundeinstellungen für das Profilfeld ändern. Diese Angaben werden im zweiten Schritt übernommen.',
 	'STEP_1_TITLE_CREATE'			=> 'Profilfeld hinzufügen',
 	'STEP_1_TITLE_EDIT'				=> 'Profilfeld ändern',
 	'STEP_2_EXPLAIN_CREATE'			=> 'Hier kannst du einige Einstellungen für die Feldart festlegen.',
-	'STEP_2_EXPLAIN_EDIT'			=> 'Hier kannst du einige Einstellungen für die Feldart vornehmen.<br/><strong>Bitte beachte, dass Änderungen keine Auswirkungen auf die bereits existierenden Angaben deiner Benutzer haben.</strong>',
+	'STEP_2_EXPLAIN_EDIT'			=> 'Hier kannst du einige Einstellungen für die Feldart vornehmen.<br /><strong>Bitte beachte, dass Änderungen keine Auswirkungen auf die bereits existierenden Angaben deiner Benutzer haben.</strong>',
 	'STEP_2_TITLE_CREATE'			=> 'Spezifische Optionen der Feldart',
 	'STEP_2_TITLE_EDIT'				=> 'Spezifische Optionen der Feldart',
 	'STEP_3_EXPLAIN_CREATE'			=> 'Da du mehr als ein Sprachpaket installiert hast, musst du auch Angaben für die anderen Sprachen machen. Du kannst diese Angaben auch später ergänzen, das Feld arbeit derweil mit der Standardsprache.',

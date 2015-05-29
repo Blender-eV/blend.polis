@@ -4,12 +4,12 @@
 * captcha_qa [Deutsch — Du]
 *
 * @package language
-* @version $Id: captcha_qa.php 512 2010-11-13 21:22:03Z philippk $
+* @version $Id: captcha_qa.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2009 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -44,7 +44,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_QUESTION_WRONG'	=> 'Du hast eine fehlerhafte Antwort auf die Frage angegeben.',
 
 	'QUESTION_ANSWERS'			=> 'Antworten',
-	'ANSWERS_EXPLAIN'			=> 'Bitte gebe gültige Antworten auf die Frage ein, jede Antwort in eine Zeile.',
+	'ANSWERS_EXPLAIN'			=> 'Bitte gib gültige Antworten auf die Frage ein, jede Antwort in eine Zeile.',
 	'CONFIRM_QUESTION'			=> 'Frage',
 
 	'ANSWER'					=> 'Antwort',

@@ -3501,3 +3501,10 @@ table.table1 {
 	width: 100%;
 }
 html>body table.table1 { width: 100%; }	/* Reset 100% for opera */
+
+ul#headerimg li {
+	display: block;
+	float: left;
+	width: 160px;
+	height: 100px
+}

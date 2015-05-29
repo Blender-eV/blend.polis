@@ -4,12 +4,12 @@
 * common [Deutsch — Du]
 *
 * @package language
-* @version $Id: common.php 582 2011-11-25 20:57:11Z philippk $
+* @version $Id: common.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -43,7 +43,7 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'Deutsche Übersetzung durch <a href="http://www.phpbb.de/">phpBB.de</a>',
+	'TRANSLATION_INFO'	=> 'Deutsche Übersetzung durch <a href="https://www.phpbb.de/">phpBB.de</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|j. M Y|', // 1. Jan 2007 (ggf. mit relativen Angaben)
 	'USER_LANG'			=> 'de',
@@ -163,6 +163,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Ändere Beitrag',
 	'EMAIL'								=> 'E-Mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-Mail-Adresse',
+	'EMAIL_INVALID_EMAIL'				=> 'Die angegebenen E-Mail-Adresse ist ungültig.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Probleme beim Mailversand in <strong>Zeile %1$s</strong>. Antwort: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Du musst einen Betreff angeben, wenn du ein neues Thema erstellen möchtest.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Du musst einen Betreff angeben, wenn du eine neue Nachricht verfassen möchtest.',
@@ -194,7 +195,7 @@ $lang = array_merge($lang, array(
 	'FORM_INVALID'			=> 'Das übermittelte Formular war ungültig. Versuche erneut, das Formular abzusenden.',
 	'FORUM'					=> 'Forum',
 	'FORUMS'				=> 'Foren',
-	'FORUMS_MARKED'			=> 'Die ausgewählten Foren wurden als gelesen markiert.',
+	'FORUMS_MARKED'			=> 'Foren wurden als gelesen markiert.',
 	'FORUM_CAT'				=> 'Kategorie',
 	'FORUM_INDEX'			=> 'Foren-Übersicht',
 	'FORUM_LINK'			=> 'Forums-Link',
@@ -393,6 +394,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Für den ausgewählten Zeitraum existieren keine Beiträge in diesem Thema.',
 	'NO_FEED_ENABLED'			=> 'Auf diesem Board sind keine Feeds verfügbar.',
 	'NO_FEED'					=> 'Der angeforderte Feed ist nicht verfügbar.',
+	'NO_STYLE_DATA'				=> 'Die Style-Daten konnten nicht abgerufen werden',
 	'NO_SUBJECT'				=> 'Kein Betreff vorhanden',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Das angegebene Such-Backend existiert nicht.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Keine unterstützte Authentifizierungs-Methode vorhanden.',
@@ -453,6 +455,7 @@ $lang = array_merge($lang, array(
 	'POST_TIME'					=> 'Erstellungsdatum',
 	'POST_TOPIC'				=> 'Neues Thema erstellen',
 	'POST_UNAPPROVED'			=> 'Dieser Beitrag wartet auf Freigabe',
+	'POWERED_BY'				=> 'Powered by %s',
 	'PREVIEW'					=> 'Vorschau',
 	'PREVIOUS'					=> 'Vorherige',		// Used in pagination
 	'PREVIOUS_STEP'				=> 'Zurück',
@@ -462,6 +465,7 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGING'			=> 'Private Nachrichten',
 	'PROFILE'					=> 'Persönlicher Bereich',
 
+	'RANK'						=> 'Rang',
 	'READING_FORUM'				=> 'Liest Themen in %s',
 	'READING_GLOBAL_ANNOUNCE'	=> 'Liest eine globale Bekanntmachung',
 	'READING_LINK'				=> 'Folgt dem Forums-Link %s',
@@ -569,10 +573,12 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Betreff',
 	'SUBMIT'					=> 'Absenden',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Nutzungsbedingungen',
 	'TEST_CONNECTION'	=> 'Verbindung testen',
 	'THE_TEAM'			=> 'Das Team',
 	'TIME'				=> 'Zeit',
+	'TIB'				=> 'TiB',
 
 	'TOO_LARGE'						=> 'Der angegebene Wert ist zu groß.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Die Zahl, die als <strong>Maximale Anzahl zulässiger Empfänger pro Privater Nachricht</strong> angegeben wurde, ist zu groß.',
@@ -718,11 +724,12 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Wer ist online?',
 	'WRONG_PASSWORD'	=> 'Du hast ein fehlerhaftes Passwort angegeben.',
+	'WRONG_DATA_COLOUR'			=> 'Der angegebene Farbwert ist nicht gültig.',
 
 	'WRONG_DATA_ICQ'			=> 'Die angegebene Nummer ist keine gültige ICQ-Nummer.',
 	'WRONG_DATA_JABBER'			=> 'Die angegebene ID ist keine gültige Jabber-ID.',
 	'WRONG_DATA_LANG'			=> 'Die von dir ausgewählte Sprache ist nicht gültig.',
-	'WRONG_DATA_WEBSITE'		=> 'Die Adresse der Website muss eine gültige URL inklusive des Protokolls sein. Zum Beispiel http://www.phpbb.de/.',
+	'WRONG_DATA_WEBSITE'		=> 'Die Adresse der Website muss eine gültige URL inklusive des Protokolls sein. Zum Beispiel https://www.phpbb.de/.',
 	'WROTE'						=> 'hat geschrieben',
 
 	'YEAR'				=> 'Jahr',

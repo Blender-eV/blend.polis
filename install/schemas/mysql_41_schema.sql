@@ -255,6 +255,7 @@ CREATE TABLE phpbb_forums (
 	display_on_index tinyint(1) UNSIGNED DEFAULT '1' NOT NULL,
 	enable_indexing tinyint(1) UNSIGNED DEFAULT '1' NOT NULL,
 	enable_icons tinyint(1) UNSIGNED DEFAULT '1' NOT NULL,
+	enable_preview tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	enable_prune tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	prune_next int(11) UNSIGNED DEFAULT '0' NOT NULL,
 	prune_days mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
@@ -571,6 +572,7 @@ CREATE TABLE phpbb_profile_fields (
 	field_default_value varchar(255) DEFAULT '' NOT NULL,
 	field_validation varchar(20) DEFAULT '' NOT NULL,
 	field_required tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
+	field_show_novalue tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	field_show_on_reg tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	field_show_on_vt tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	field_show_profile tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
@@ -830,6 +832,7 @@ CREATE TABLE phpbb_topics (
 	topic_id mediumint(8) UNSIGNED NOT NULL auto_increment,
 	forum_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
 	icon_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
+	preview_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
 	topic_attachment tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	topic_approved tinyint(1) UNSIGNED DEFAULT '1' NOT NULL,
 	topic_reported tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
@@ -855,6 +858,7 @@ CREATE TABLE phpbb_topics (
 	topic_moved_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
 	topic_bumped tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	topic_bumper mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
+	topic_solved tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	poll_title varchar(255) DEFAULT '' NOT NULL,
 	poll_start int(11) UNSIGNED DEFAULT '0' NOT NULL,
 	poll_length int(11) UNSIGNED DEFAULT '0' NOT NULL,
@@ -1028,6 +1032,17 @@ CREATE TABLE phpbb_zebra (
 	friend tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	foe tinyint(1) UNSIGNED DEFAULT '0' NOT NULL,
 	PRIMARY KEY (user_id, zebra_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+
+# Table: 'bp_hottopics'
+CREATE TABLE bp_hottopics (
+	slot_id tinyint(3) DEFAULT '0' NOT NULL,
+	topic_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
+	forum_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
+	image_id mediumint(8) UNSIGNED DEFAULT '0' NOT NULL,
+	last_update int(11) UNSIGNED DEFAULT '0' NOT NULL,
+	PRIMARY KEY (slot_id)
 ) CHARACTER SET `utf8` COLLATE `utf8_bin`;
 
 

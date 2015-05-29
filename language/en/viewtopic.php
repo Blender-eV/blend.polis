@@ -101,6 +101,9 @@ $lang = array_merge($lang, array(
 
 	'UNLOCK_TOPIC'			=> 'Unlock topic',
 
+	'TOPIC_SOLVED_SET'	=> 'Mark topic as solved',
+	'TOPIC_SOLVED_UNSET'	=> 'Mark topic as not solved',
+
 	'VIEW_INFO'				=> 'Post details',
 	'VIEW_NEXT_TOPIC'		=> 'Next topic',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Previous topic',

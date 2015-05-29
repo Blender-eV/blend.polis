@@ -369,6 +369,7 @@ CREATE TABLE phpbb_forums (
 	display_on_index INTEGER DEFAULT 1 NOT NULL,
 	enable_indexing INTEGER DEFAULT 1 NOT NULL,
 	enable_icons INTEGER DEFAULT 1 NOT NULL,
+	enable_preview INTEGER DEFAULT 0 NOT NULL,
 	enable_prune INTEGER DEFAULT 0 NOT NULL,
 	prune_next INTEGER DEFAULT 0 NOT NULL,
 	prune_days INTEGER DEFAULT 0 NOT NULL,
@@ -807,6 +808,7 @@ CREATE TABLE phpbb_profile_fields (
 	field_default_value VARCHAR(255) CHARACTER SET UTF8 DEFAULT '' NOT NULL COLLATE UNICODE,
 	field_validation VARCHAR(20) CHARACTER SET UTF8 DEFAULT '' NOT NULL COLLATE UNICODE,
 	field_required INTEGER DEFAULT 0 NOT NULL,
+	field_show_novalue INTEGER DEFAULT 0 NOT NULL,
 	field_show_on_reg INTEGER DEFAULT 0 NOT NULL,
 	field_show_on_vt INTEGER DEFAULT 0 NOT NULL,
 	field_show_profile INTEGER DEFAULT 0 NOT NULL,
@@ -1216,6 +1218,7 @@ CREATE TABLE phpbb_topics (
 	topic_id INTEGER NOT NULL,
 	forum_id INTEGER DEFAULT 0 NOT NULL,
 	icon_id INTEGER DEFAULT 0 NOT NULL,
+	preview_id INTEGER DEFAULT 0 NOT NULL,
 	topic_attachment INTEGER DEFAULT 0 NOT NULL,
 	topic_approved INTEGER DEFAULT 1 NOT NULL,
 	topic_reported INTEGER DEFAULT 0 NOT NULL,
@@ -1241,6 +1244,7 @@ CREATE TABLE phpbb_topics (
 	topic_moved_id INTEGER DEFAULT 0 NOT NULL,
 	topic_bumped INTEGER DEFAULT 0 NOT NULL,
 	topic_bumper INTEGER DEFAULT 0 NOT NULL,
+	topic_solved INTEGER DEFAULT 0 NOT NULL,
 	poll_title VARCHAR(255) CHARACTER SET UTF8 DEFAULT '' NOT NULL COLLATE UNICODE,
 	poll_start INTEGER DEFAULT 0 NOT NULL,
 	poll_length INTEGER DEFAULT 0 NOT NULL,
@@ -1466,5 +1470,17 @@ CREATE TABLE phpbb_zebra (
 );;
 
 ALTER TABLE phpbb_zebra ADD PRIMARY KEY (user_id, zebra_id);;
+
+
+# Table: 'bp_hottopics'
+CREATE TABLE bp_hottopics (
+	slot_id INTEGER DEFAULT 0 NOT NULL,
+	topic_id INTEGER DEFAULT 0 NOT NULL,
+	forum_id INTEGER DEFAULT 0 NOT NULL,
+	image_id INTEGER DEFAULT 0 NOT NULL,
+	last_update INTEGER DEFAULT 0 NOT NULL
+);;
+
+ALTER TABLE bp_hottopics ADD PRIMARY KEY (slot_id);;
 
 

@@ -4,12 +4,12 @@
 * posting [Deutsch — Du]
 *
 * @package language
-* @version $Id: posting.php 582 2011-11-25 20:57:11Z philippk $
+* @version $Id: posting.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -45,6 +45,7 @@ $lang = array_merge($lang, array(
 	'ADD_POLL'					=> 'Umfrage erstellen',
 	'ADD_POLL_EXPLAIN'			=> 'Wenn du zu dem Thema keine Umfrage hinzufügen möchtest, lass die Felder einfach leer.',
 	'ALREADY_DELETED'			=> 'Diese Nachricht wurde bereits gelöscht.',
+	'ATTACH_DISK_FULL'			=> 'Es steht nicht genügend Speicherplatz zur Verfügung, um diesen Anhang zu veröffentlichen.',
 	'ATTACH_QUOTA_REACHED'		=> 'Das Kontingent für Dateianhänge ist bereits vollständig ausgenutzt.',
 	'ATTACH_SIG'				=> 'Signatur anhängen (die Signatur kann im persönlichen Bereich geändert werden)',
 
@@ -56,9 +57,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s ist <em>ausgeschaltet</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s ist <em>eingeschaltet</em>',
 	'BBCODE_I_HELP'				=> 'Kursiv: [i]Text[/i]',
-	'BBCODE_L_HELP'				=> 'Aufzählung: [list]Text[/list]',
+	'BBCODE_L_HELP'				=> 'Aufzählung: [list][*]Text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'Listeneintrag: [*]Text',
-	'BBCODE_O_HELP'				=> 'Geordnete Aufzählung: [list=]Text[/list]',
+	'BBCODE_O_HELP'				=> 'Geordnete Aufzählung: z. B. [list=1][*]Erster Punkt[/list] oder [list=a][*]Punkt a[/list]',
 	'BBCODE_P_HELP'				=> 'Bild einfügen: [img]http://bild_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Zitat: [quote]Text[/quote]',
 	'BBCODE_S_HELP'				=> 'Schriftfarbe: [color=red]Text[/color]  Tipp: Du kannst auch color=#FF0000 benutzen',

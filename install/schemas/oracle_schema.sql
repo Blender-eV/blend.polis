@@ -512,6 +512,7 @@ CREATE TABLE phpbb_forums (
 	display_on_index number(1) DEFAULT '1' NOT NULL,
 	enable_indexing number(1) DEFAULT '1' NOT NULL,
 	enable_icons number(1) DEFAULT '1' NOT NULL,
+	enable_preview number(1) DEFAULT '0' NOT NULL,
 	enable_prune number(1) DEFAULT '0' NOT NULL,
 	prune_next number(11) DEFAULT '0' NOT NULL,
 	prune_days number(8) DEFAULT '0' NOT NULL,
@@ -1085,6 +1086,7 @@ CREATE TABLE phpbb_profile_fields (
 	field_default_value varchar2(765) DEFAULT '' ,
 	field_validation varchar2(60) DEFAULT '' ,
 	field_required number(1) DEFAULT '0' NOT NULL,
+	field_show_novalue number(1) DEFAULT '0' NOT NULL,
 	field_show_on_reg number(1) DEFAULT '0' NOT NULL,
 	field_show_on_vt number(1) DEFAULT '0' NOT NULL,
 	field_show_profile number(1) DEFAULT '0' NOT NULL,
@@ -1614,6 +1616,7 @@ CREATE TABLE phpbb_topics (
 	topic_id number(8) NOT NULL,
 	forum_id number(8) DEFAULT '0' NOT NULL,
 	icon_id number(8) DEFAULT '0' NOT NULL,
+	preview_id number(8) DEFAULT '0' NOT NULL,
 	topic_attachment number(1) DEFAULT '0' NOT NULL,
 	topic_approved number(1) DEFAULT '1' NOT NULL,
 	topic_reported number(1) DEFAULT '0' NOT NULL,
@@ -1639,6 +1642,7 @@ CREATE TABLE phpbb_topics (
 	topic_moved_id number(8) DEFAULT '0' NOT NULL,
 	topic_bumped number(1) DEFAULT '0' NOT NULL,
 	topic_bumper number(8) DEFAULT '0' NOT NULL,
+	topic_solved number(1) DEFAULT '0' NOT NULL,
 	poll_title varchar2(765) DEFAULT '' ,
 	poll_start number(11) DEFAULT '0' NOT NULL,
 	poll_length number(11) DEFAULT '0' NOT NULL,
@@ -1917,6 +1921,20 @@ CREATE TABLE phpbb_zebra (
 	friend number(1) DEFAULT '0' NOT NULL,
 	foe number(1) DEFAULT '0' NOT NULL,
 	CONSTRAINT pk_phpbb_zebra PRIMARY KEY (user_id, zebra_id)
+)
+/
+
+
+/*
+	Table: 'bp_hottopics'
+*/
+CREATE TABLE bp_hottopics (
+	slot_id number(3) DEFAULT '0' NOT NULL,
+	topic_id number(8) DEFAULT '0' NOT NULL,
+	forum_id number(8) DEFAULT '0' NOT NULL,
+	image_id number(8) DEFAULT '0' NOT NULL,
+	last_update number(11) DEFAULT '0' NOT NULL,
+	CONSTRAINT pk_bp_hottopics PRIMARY KEY (slot_id)
 )
 /
 

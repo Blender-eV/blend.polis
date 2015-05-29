@@ -4,12 +4,12 @@
 * acp_permissions_phpbb (phpBB Permission Set) [Deutsch — Du]
 *
 * @package language
-* @version $Id: permissions_phpbb.php 433 2010-02-24 13:15:18Z philippk $
+* @version $Id: permissions_phpbb.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -190,8 +190,8 @@ $lang = array_merge($lang, array(
 	'acl_m_merge'	=> array('lang' => 'Kann Themen zusammenführen', 'cat' => 'topic_actions'),
 
 	'acl_m_info'	=> array('lang' => 'Kann Beitrags-Details ansehen', 'cat' => 'misc'),
-	'acl_m_warn'	=> array('lang' => 'Kann Verwarnungen aussprechen<br/><em>Diese Berechtigung wird global und nicht forenbezogen erteilt.</em>', 'cat' => 'misc'), // This moderator setting is only global (and not local)
-	'acl_m_ban'		=> array('lang' => 'Kann Sperren verwalten<br/><em>Diese Berechtigung wird global und nicht forenbezogen erteilt.</em>', 'cat' => 'misc'), // This moderator setting is only global (and not local)
+	'acl_m_warn'	=> array('lang' => 'Kann Verwarnungen aussprechen<br /><em>Diese Berechtigung wird global und nicht forenbezogen erteilt.</em>', 'cat' => 'misc'), // This moderator setting is only global (and not local)
+	'acl_m_ban'		=> array('lang' => 'Kann Sperren verwalten<br /><em>Diese Berechtigung wird global und nicht forenbezogen erteilt.</em>', 'cat' => 'misc'), // This moderator setting is only global (and not local)
 ));
 
 // Admin Permissions
@@ -211,7 +211,7 @@ $lang = array_merge($lang, array(
 	'acl_a_bbcode'		=> array('lang' => 'Kann BBCode-Tags festlegen', 'cat' => 'posting'),
 	'acl_a_attach'		=> array('lang' => 'Kann Einstellungen zu Dateianhängen ändern', 'cat' => 'posting'),
 
-	'acl_a_user'		=> array('lang' => 'Kann Benutzer verwalten<br/><em>Dies beinhaltet das Recht, den verwendeten Browser in der Wer-ist-online-Liste einzusehen.</em>', 'cat' => 'user_group'),
+	'acl_a_user'		=> array('lang' => 'Kann Benutzer verwalten<br /><em>Dies beinhaltet das Recht, den verwendeten Browser in der Wer-ist-online-Liste einzusehen.</em>', 'cat' => 'user_group'),
 	'acl_a_userdel'		=> array('lang' => 'Kann Benutzer löschen', 'cat' => 'user_group'),
 	'acl_a_group'		=> array('lang' => 'Kann Gruppen verwalten', 'cat' => 'user_group'),
 	'acl_a_groupadd'	=> array('lang' => 'Kann neue Gruppen erstellen', 'cat' => 'user_group'),

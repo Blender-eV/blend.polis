@@ -4,12 +4,12 @@
 * acp_common [Deutsch — Du]
 *
 * @package language
-* @version $Id: common.php 581 2011-11-22 19:15:46Z philippk $
+* @version $Id: common.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -408,7 +408,7 @@ $lang = array_merge($lang, array(
 	'INACTIVE_REASON_UNKNOWN'		=> 'Unbekannt',
 	'INACTIVE_USERS'				=> 'Inaktive Benutzer',
 	'INACTIVE_USERS_EXPLAIN'		=> 'Dies ist eine Liste der Benutzer, deren Konto inaktiv ist. Du kannst diese Benutzer aktivieren, löschen oder erinnern (per E-Mail).',
-	'INACTIVE_USERS_EXPLAIN_INDEX'	=> 'Dies ist eine Liste der 10 zuletzt registrierten Benutzer, deren Konto inaktiv ist. Eine vollständige Liste ist über den entsprechenden Menüeintrag oder den unten stehenden Link zugänglich, von der aus du diese Benutzer aktivieren, löschen oder erinnern (per E-Mail) kannst.',
+	'INACTIVE_USERS_EXPLAIN_INDEX'	=> 'Dies ist eine Liste der 10 zuletzt registrierten Benutzer, deren Konto inaktiv ist. Benutzerkonten können inaktiv sein, wenn in den Registrierungs-Einstellungen eine Benutzerkonto-Aktivierung eingestellt wurde, diese bei dem Benutzer aber nicht durchgeführt wurde oder weil die Benutzerkonten deaktiviert wurden. Eine vollständige Liste ist über den unten stehenden Link zugänglich, von der aus du diese Benutzer aktivieren, löschen oder erinnern (per E-Mail) kannst.',
 
 	'NO_INACTIVE_USERS'	=> 'Keine inaktiven Benutzer',
 

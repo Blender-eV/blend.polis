@@ -4,12 +4,12 @@
 * ucp [Deutsch — Du]
 *
 * @package language
-* @version $Id: ucp.php 582 2011-11-25 20:57:11Z philippk $
+* @version $Id: ucp.php 617 2013-09-29 10:21:18Z pyramide $
 * @copyright (c) 2005 phpBB Group; 2006 phpBB.de
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 * Deutsche Übersetzung durch die Übersetzer-Gruppe von phpBB.de:
-* siehe docs/AUTHORS und http://www.phpbb.de/go/ubersetzerteam
+* siehe docs/AUTHORS und https://www.phpbb.de/go/ubersetzerteam
 *
 */
 
@@ -120,7 +120,7 @@ $lang = array_merge($lang, array(
 	'ADD_NEW_RULE'					=> 'Neue Regel erstellen',
 	'ADD_RULE'						=> 'Regel erstellen',
 	'ADD_TO'						=> '[ An ]',
-	'ADD_USERS_UCP_EXPLAIN'			=> 'Hier kannst du neue Benutzer der Gruppe hinzufügen. Du kannst festlegen, ob die Gruppe zur Standardgruppe der angegebenen Benutzer wird. Bitte gebe jeden Benutzernamen in einer neuen Zeile ein.',
+	'ADD_USERS_UCP_EXPLAIN'			=> 'Hier kannst du neue Benutzer der Gruppe hinzufügen. Du kannst festlegen, ob die Gruppe zur Standardgruppe der angegebenen Benutzer wird. Bitte gib jeden Benutzernamen in einer neuen Zeile ein.',
 	'ADMIN_EMAIL'					=> 'Administratoren dürfen mir Informationen per E-Mail schicken',
 	'AGREE'							=> 'Ich bin mit diesen Bedingungen einverstanden',
 	'ALLOW_PM'						=> 'Andere Mitglieder dürfen mir Private Nachrichten schicken',
@@ -178,7 +178,8 @@ $lang = array_merge($lang, array(
 	'CREATE_FOLDER'				=> 'Ordner anlegen …',
 	'CURRENT_IMAGE'				=> 'Aktuelles Bild',
 	'CURRENT_PASSWORD'			=> 'Aktuelles Passwort',
-	'CURRENT_PASSWORD_EXPLAIN'	=> 'Du musst dein aktuelles Passwort bestätigen, wenn du es ändern oder deinen Benutzernamen oder deine E-Mail-Adresse abändern möchtest.',
+	'CURRENT_PASSWORD_EXPLAIN'	=> 'Du musst dein aktuelles Passwort eingeben, wenn du deinen Benutzernamen oder deine E-Mail-Adresse abändern möchtest.',
+	'CURRENT_CHANGE_PASSWORD_EXPLAIN' => 'Damit du dein Passwort, deine E-Mail-Adresse oder deinen Benutzernamen ändern kannst, musst du dein aktuelles Passwort eingeben.',
 	'CUR_PASSWORD_EMPTY'		=> 'Du hast dein aktuelles Passwort nicht angegeben.',
 	'CUR_PASSWORD_ERROR'		=> 'Das angegebene aktuelle Passwort ist fehlerhaft.',
 	'CUSTOM_DATEFORMAT'			=> 'Eigenes …',
@@ -216,7 +217,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Hier hast du die Möglichkeit, deine Entwürfe zu ändern. Entwürfe enthalten keine Informationen zu Dateianhängen und Umfragen.',
 	'EMAIL_BANNED_EMAIL'		=> 'Die von dir angegebene E-Mail-Adresse darf nicht benutzt werden.',
-	'EMAIL_INVALID_EMAIL'		=> 'Die von dir angegebene E-Mail-Adresse ist ungültig.',
 	'EMAIL_REMIND'				=> 'Du musst die E-Mail-Adresse angeben, die in deinem Profil hinterlegt ist. Diese hast du bei der Registrierung angegeben oder nachträglich in deinem persönlichen Bereich geändert.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Die angegebene E-Mail-Adresse wird bereits verwendet.',
 	'EMPTY_DRAFT'				=> 'Du musst eine Nachricht eingeben, um deine Änderungen zu speichern.',
@@ -297,8 +297,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'von',
 	'MESSAGE_COLOURS'				=> 'Nachrichten-Farben',
 	'MESSAGE_DELETED'				=> 'Nachricht erfolgreich gelöscht.',
+	'MESSAGE_EDITED'				=> 'Nachricht erfolgreich geändert.',
 	'MESSAGE_HISTORY'				=> 'Nachrichten-Verlauf',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Diese Nachricht wurde von ihrem Autor gelöscht, bevor sie an dich ausgeliefert wurde.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Diese Nachricht wurde von ihrem Autor gelöscht.',
 	'MESSAGE_SENT_ON'				=> 'am',
 	'MESSAGE_STORED'				=> 'Die Nachricht wurde erfolgreich gesendet.',
 	'MESSAGE_TO'					=> 'An',
@@ -310,7 +311,7 @@ $lang = array_merge($lang, array(
 	'MOVE_TO_FOLDER'				=> 'In Ordner verschieben',
 	'MOVE_UP'						=> 'Nach oben',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Du hast dein Passwort nicht bestätigt.',
+	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Du hast deine E-Mail-Adresse nicht bestätigt.',
 	'NEW_EMAIL_ERROR'			=> 'Die angegebenen E-Mail-Adressen stimmten nicht überein.',
 	'NEW_FOLDER_NAME'			=> 'Neuer Name des Ordners',
 	'NEW_PASSWORD'				=> 'Neues Passwort',
@@ -428,6 +429,7 @@ $lang = array_merge($lang, array(
 	'RULE_ADDED'						=> 'Regel erfolgreich hinzugefügt.',
 	'RULE_ALREADY_DEFINED'				=> 'Diese Regel wurde bereits festgelegt.',
 	'RULE_DELETED'						=> 'Regel erfolgreich entfernt.',
+	'RULE_LIMIT_REACHED'				=> 'Du kannst keine weiteren Regeln für Private Nachrichten erstellen, da du das Maximum möglicher Regeln erreicht hast.',
 	'RULE_NOT_DEFINED'					=> 'Die Regel wurde nicht korrekt definiert.',
 	'RULE_REMOVED_MESSAGE'				=> 'Eine Private Nachricht wurde auf Grund deiner Regeln entfernt.',
 	'RULE_REMOVED_MESSAGES'				=> '%d Private Nachrichten wurden auf Grund deiner Regeln entfernt.',
