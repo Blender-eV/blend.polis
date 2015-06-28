@@ -53,7 +53,7 @@
 		<!-- BEGIN searchresults -->
 			<li class="row<!-- IF searchresults.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
 				<dl class="icon" style="background-image: url({searchresults.TOPIC_FOLDER_IMG_SRC}); background-repeat: no-repeat;">
-					<a class="lastpost_iconlink_a" style="display: none;" href="{searchresults.U_LAST_POST}"><span class="lastpost_iconlink_span"></span></a>
+					<!-- IF searchresults.S_UNREAD_TOPIC --><!-- jh: add --><a class="lastpost_iconlink_a" style="display: none;" href="{searchresults.U_NEWEST_POST}"><span class="lastpost_iconlink_span"></span></a><!-- jh: end --><!-- ELSE --><!-- jh: add --><a class="lastpost_iconlink_a" style="display: none;" href="{searchresults.U_LAST_POST}"><span class="lastpost_iconlink_span"></span></a><!-- jh: end --><!-- ENDIF -->
 					<dt <!-- IF searchresults.TOPIC_ICON_IMG -->style="background-image: url({T_ICONS_PATH}{searchresults.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF -->>
 						<!-- IF searchresults.S_UNREAD_TOPIC --><a href="{searchresults.U_NEWEST_POST}">{NEWEST_POST_IMG}</a> <!-- ENDIF -->
 						<a href="{searchresults.U_VIEW_TOPIC}" class="topictitle">{searchresults.TOPIC_TITLE}</a> {searchresults.ATTACH_ICON_IMG}

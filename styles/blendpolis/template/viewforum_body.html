@@ -136,7 +136,7 @@
 	
 		<li class="row<!-- IF topicrow.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> reported<!-- ENDIF -->">
 			<dl class="icon" style="background-image: url({topicrow.TOPIC_FOLDER_IMG_SRC}); background-repeat: no-repeat;">
-				<a class="lastpost_iconlink_a" style="display: none;" href="{topicrow.U_LAST_POST}"><span class="lastpost_iconlink_span"></span></a>
+				<!-- IF topicrow.S_UNREAD_TOPIC --><!-- jh: add --><a class="lastpost_iconlink_a" style="display: none;" href="{topicrow.U_NEWEST_POST}"><span class="lastpost_iconlink_span"></span></a><!-- jh: end --><!-- ELSE --><!-- jh: add --><a class="lastpost_iconlink_a" style="display: none;" href="{topicrow.U_LAST_POST}"><span class="lastpost_iconlink_span"></span></a><!-- jh: end --><!-- ENDIF -->
 				<dt style="<!-- IF topicrow.TOPIC_ICON_IMG and S_TOPIC_ICONS -->background-image: url({T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}); background-repeat: no-repeat;<!-- ENDIF -->" title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
 					<!-- IF topicrow.TOPIC_PREVIEW_IMG and S_TOPIC_PREVIEW --><!-- pat: add -->
 					<img src="./download/file.php?id={topicrow.TOPIC_PREVIEW_IMG}&amp;t=1" style="float:right" alt="" />
